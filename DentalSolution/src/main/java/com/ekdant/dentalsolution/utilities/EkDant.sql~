@@ -1,0 +1,310 @@
+--
+-- Banco de Dados: `mr_tooth`
+--
+CREATE DATABASE `mr_tooth`;
+USE `mr_tooth`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `acessos`
+--
+
+CREATE TABLE IF NOT EXISTS `acessos` (
+  `cod_acesso` int(11) NOT NULL auto_increment,
+  `cod_usuario` int(11) NOT NULL,
+  `nome_us` varchar(45) NOT NULL,
+  `login_us` varchar(16) NOT NULL,
+  `tipo_us` varchar(45) NOT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `tipo_acesso` enum('Entrada','Saida') NOT NULL,
+  `data_acesso` datetime NOT NULL,
+  PRIMARY KEY  (`cod_acesso`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `agenda`
+--
+
+CREATE TABLE IF NOT EXISTS `agenda` (
+  `data_agen` date NOT NULL,
+  `hora_agen` time NOT NULL,
+  `cod_dentista` varchar(11) NOT NULL,
+  `cod_paciente` int(10) default NULL,
+  `descricao_agen` mediumtext,
+  `cod_tratamento` int(11) NOT NULL,
+  `descricao_tra` varchar(200) default NULL,
+  `faltou_agen` enum('Sim','Nao') default 'Nao',
+  PRIMARY KEY  (`data_agen`,`hora_agen`,`cod_dentista`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cheques`
+--
+
+CREATE TABLE IF NOT EXISTS `cheques` (
+  `cod_cheque` int(11) NOT NULL auto_increment,
+  `cod_paciente` int(11) default NULL,
+  `nometitular_cheq` varchar(80) default NULL,
+  `valor_cheq` float default NULL,
+  `numero_cheq` varchar(50) default NULL,
+  `banco_cheq` varchar(50) default NULL,
+  `agencia_cheq` varchar(20) default NULL,
+  `compensacao_cheq` date default NULL,
+  PRIMARY KEY  (`cod_cheque`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contas_receber`
+--
+
+CREATE TABLE IF NOT EXISTS `contas_receber` (
+  `cod_conta` int(11) NOT NULL auto_increment,
+  `datavencimento_con` date default NULL,
+  `descricao_con` mediumtext,
+  `valor_con` float default NULL,
+  `datapagamento_con` date default NULL,
+  PRIMARY KEY  (`cod_conta`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contatos`
+--
+
+CREATE TABLE IF NOT EXISTS `contatos` (
+  `cod_contato` int(11) NOT NULL auto_increment,
+  `nome_cont` varchar(80) NOT NULL,
+  `endereco_cont` varchar(50) default NULL,
+  `cidade_cont` varchar(50) default NULL,
+  `estado_cont` varchar(2) default NULL,
+  `cep_cont` varchar(9) default NULL,
+  `celular_cont` varchar(12) default NULL,
+  `telefone1_cont` varchar(12) NOT NULL,
+  `telefone2_cont` varchar(12) default NULL,
+  `email_cont` varchar(80) default NULL,
+  PRIMARY KEY  (`cod_contato`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `convenios`
+--
+
+CREATE TABLE IF NOT EXISTS `convenios` (
+  `cod_convenio` int(11) NOT NULL auto_increment,
+  `nome_con` varchar(50) NOT NULL,
+  `cnpj_con` varchar(14) NOT NULL,
+  `endereco_con` varchar(60) default NULL,
+  `numero_con` varchar(20) default NULL,
+  `cidade_con` varchar(50) default NULL,
+  `estado_con` varchar(2) default NULL,
+  `telefone_con` varchar(14) NOT NULL,
+  `email_con` varchar(60) default NULL,
+  PRIMARY KEY  (`cod_convenio`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `dentistas`
+--
+
+CREATE TABLE IF NOT EXISTS `dentistas` (
+  `cod_dentista` int(11) NOT NULL auto_increment,
+  `nome_dent` varchar(70) NOT NULL,
+  `rg_dent` varchar(13) NOT NULL,
+  `cpf_dent` varchar(14) NOT NULL,
+  `cro_dent` varchar(15) NOT NULL,
+  `dtnasc_dent` date NOT NULL,
+  `sexo_dent` enum('Masculino','Feminino') NOT NULL,
+  `foto_dent` blob,
+  `endereco_dent` varchar(60) default NULL,
+  `cidade_dent` varchar(45) default NULL,
+  `estado_dent` varchar(2) default NULL,
+  `telefone_dent` varchar(12) default NULL,
+  `celular_dent` varchar(12) default NULL,
+  PRIMARY KEY  (`cod_dentista`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `fotos_pacientes`
+--
+
+CREATE TABLE IF NOT EXISTS `fotos_pacientes` (
+  `cod_foto` int(11) NOT NULL auto_increment,
+  `cod_paciente` int(11) default NULL,
+  `foto_foto` blob,
+  `legenda_foto` varchar(45) default NULL,
+  PRIMARY KEY  (`cod_foto`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `funcionarios`
+--
+
+CREATE TABLE IF NOT EXISTS `funcionarios` (
+  `cod_funcionario` int(11) NOT NULL auto_increment,
+  `nome_fun` varchar(70) NOT NULL,
+  `rg_fun` varchar(13) NOT NULL,
+  `cpf_fun` varchar(14) NOT NULL,
+  `dtnasc_fun` date NOT NULL,
+  `sexo_fun` enum('Masculino','Feminino') NOT NULL,
+  `foto_fun` blob,
+  `endereco_fun` varchar(70) default NULL,
+  `cidade_fun` varchar(50) default NULL,
+  `estado_fun` varchar(2) default NULL,
+  `telefone_fun` varchar(12) default NULL,
+  `celular_fun` varchar(12) default NULL,
+  PRIMARY KEY  (`cod_funcionario`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `odontograma`
+--
+
+CREATE TABLE IF NOT EXISTS `odontograma` (
+  `cod_odontograma` int(11) NOT NULL auto_increment,
+  `cod_paciente` int(11) NOT NULL,
+  `nome_pac` varchar(45) NOT NULL,
+  `18_odon` text,
+  `17_odon` text,
+  `16_odon` text,
+  `15-55_odon` text,
+  `14-54_odon` text,
+  `13-53_odon` text,
+  `12-52_odon` text,
+  `11-51_odon` text,
+  `41-81_odon` text,
+  `42-82_odon` text,
+  `43-83_odon` text,
+  `44-84_odon` text,
+  `45-85_odon` text,
+  `46_odon` text,
+  `47_odon` text,
+  `48_odon` text,
+  `28_odon` text,
+  `27_odon` text,
+  `26_odon` text,
+  `65-25_odon` text,
+  `64-24_odon` text,
+  `63-23_odon` text,
+  `62-22_odon` text,
+  `61-21_odon` text,
+  `71-31_odon` text,
+  `72-32_odon` text,
+  `73-33_odon` text,
+  `74-34_odon` text,
+  `75-35_odon` text,
+  `36_odon` text,
+  `37_odon` text,
+  `38_odon` text,
+  PRIMARY KEY  (`cod_odontograma`)
+);
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pacientes`
+--
+
+CREATE TABLE IF NOT EXISTS `pacientes` (
+  `cod_paciente` int(11) NOT NULL auto_increment,
+  `nome_pac` varchar(45) NOT NULL,
+  `rg_pac` varchar(13) NOT NULL,
+  `cpf_pac` varchar(14) NOT NULL,
+  `dtnasc_pac` varchar(10) NOT NULL,
+  `sexo_pac` enum('Masculino','Feminino') NOT NULL,
+  `foto_pac` blob,
+  `endereco_pac` varchar(60) default NULL,
+  `numero_pac` varchar(30) default NULL,
+  `cidade_pac` varchar(50) default NULL,
+  `estado_pac` varchar(2) default NULL,
+  `telefone_pac` varchar(14) NOT NULL,
+  `celular_pac` varchar(14) default NULL,
+  `email_pac` varchar(60) default NULL,
+  `cod_convenio` int(11) default NULL,
+  `nome_con` varchar(80) default NULL,
+  PRIMARY KEY  (`cod_paciente`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `parcelas_orcamento`
+--
+
+CREATE TABLE IF NOT EXISTS `parcelas_orcamento` (
+  `cod_parcela` int(11) NOT NULL auto_increment,
+  `cod_orcamento` int(11) default NULL,
+  `datavencimento_parc` date default NULL,
+  `valor_parc` float default NULL,
+  `pago_parc` enum('Sim','Nao') default NULL,
+  `datapgto_parc` date default NULL,
+  PRIMARY KEY  (`cod_parcela`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tratamentos`
+--
+
+CREATE TABLE IF NOT EXISTS `tratamentos` (
+  `cod_tratamento` int(11) NOT NULL auto_increment,
+  `nome_tra` varchar(50) NOT NULL,
+  `descricao_tra` varchar(200) default NULL,
+  `valor_tra` float default NULL,
+  PRIMARY KEY  (`cod_tratamento`)
+);
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `cod_usuario` int(11) NOT NULL auto_increment,
+  `nome_us` varchar(45) NOT NULL,
+  `login_us` varchar(16) NOT NULL,
+  `senha_us` varchar(8) NOT NULL,
+  `tipo_us` enum('Funcionario','Dentista','Administrador') NOT NULL,
+  PRIMARY KEY  (`cod_usuario`)
+);
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`cod_usuario`, `nome_us`, `login_us`, `senha_us`, `tipo_us`) VALUES
+(1, 'Administrador', 'admin', 'admin', 'Administrador');
+
