@@ -44,6 +44,9 @@ public class ConnectionPool {
         catch(SQLException erroSQL){
              JOptionPane.showMessageDialog(null,"The SQL command not work: "+erroSQL+",  SQL past: "+sql);
         }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null,"The SQL command not work: "+e+",  SQL past: "+sql);
+        }
         return result;
     }
 
