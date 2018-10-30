@@ -10,7 +10,7 @@ public class ConnectionPool {
     final private static String mydatabase = "EkDant";
     final private static String ip = "localhost";
     final private static String port = "3306";
-    final private static String url = "jdbc:sqlite:c:/EkDant/ConvertedEkdant.sqlite" ;
+    final private static String url = "jdbc:sqlite:D:/Sushant/ConvertedEkdant.sqlite" ;
     final private static String username = "root";
     final private static String password = "root";
     private static ConnectionPool connection;

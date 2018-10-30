@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.DateFormat;
+import java.text.Normalizer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -132,6 +133,12 @@ public class Utils {
         } catch (Exception e) {
         }
         result = result.trim();
-        return getValidString(result).trim();
+        return getValidString(formatFileName(result)).trim();
+    }
+
+    private static String formatFileName(String fileName){
+        String normalized = Normalizer.normalize(fileName, Normalizer.Form.NFD);
+        String result = normalized.replaceAll("[^A-Za-z0-9]", "");
+        return result;
     }
 }

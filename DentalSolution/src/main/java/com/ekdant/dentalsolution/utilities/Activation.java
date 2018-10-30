@@ -11,6 +11,7 @@ import com.ekdant.dentalsolution.domain.ActivationBean;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.DateFormat;
+import java.text.Normalizer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -186,6 +187,8 @@ public class Activation extends javax.swing.JFrame {
         }catch(Exception e){System.out.println(e.getMessage());}
         return success;
     }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFileChooser activationFileUploaderFC;
     private javax.swing.JLabel uploadFileLbl;

@@ -1,1 +1,5 @@
+.idea/
+/DentalSolution/target/
+.idea/
+*.sqlite
 /DentalSolution/target/
