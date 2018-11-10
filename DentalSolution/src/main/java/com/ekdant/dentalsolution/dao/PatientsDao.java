@@ -117,7 +117,7 @@ public class PatientsDao {
                 patient.setCity(rs.getString("CITY"));
                 patient.setTelephone(rs.getString("TELEPHONE"));
                 patient.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(!rs.getString("BIRTHDAY").isEmpty())
                     patient.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 patient.setPreMedicalHistory(rs.getString("PREMEDICALHISTORY"));
                 patients.add(patient);
@@ -143,7 +143,7 @@ public class PatientsDao {
                 patient.setTelephone(rs.getString("TELEPHONE"));
                 patient.setMobile(rs.getString("MOBILE"));
                 patient.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     patient.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 patient.setPreMedicalHistory(rs.getString("PREMEDICALHISTORY"));
             }
@@ -167,7 +167,7 @@ public class PatientsDao {
                 patient.setCity(rs.getString("CITY"));
                 patient.setTelephone(rs.getString("TELEPHONE"));
                 patient.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     patient.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 patient.setPreMedicalHistory(rs.getString("PREMEDICALHISTORY"));
             }

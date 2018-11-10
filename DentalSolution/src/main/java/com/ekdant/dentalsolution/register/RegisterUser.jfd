@@ -1,0 +1,129 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq l {par l {comp nameLbl::l:p::p, comp userLbl::l:p::p, comp passwordLbl::l:p::p, comp typeLbl::l:p::p}, space :p:34:p, par l {comp userNameTxt::l::459:x:1, comp userTxt::l::459:x:1, comp passwordTxt::l::459:x:1, seq l {comp userIdTxt:::p::p:1, space :0:0:x}}}, seq l {space :p:87:p, comp userTypeCB::::194:x, space :p:272:p}, seq l {comp searchLbl:::p::p, space s:::p, comp searchTxt:::p:328:p:1, space :::p, comp searchBtn::::151:x}, seq l {par l {comp firstBtn:::p:143:p:1, seq {space :1:1:1, comp saveBtn:::p:142:p}}, space :::p, par l {comp newBtn::::128:x:1, comp previousBtn::l::128:x:1}, space :::p, par l {comp updateBtn::::130:x:1, comp nextBtn::l::130:x:1}, space :::p, par l {comp lastBtn::::124:x, comp deleteBtn::l::124:x}}}, space :::p}, comp jSeparator1::l::577:x, comp jSeparator2::l::577:x}"
+			"$verticalGroup": "par l {seq l {space :p:24:p, par b {comp searchLbl::b:p::p, comp searchTxt::b:p::p, comp searchBtn::b:p::p}, space :::p, comp jSeparator1:::p:10:p, space :p:17:p, comp userIdTxt:::p::p, space u:::p, par b {comp nameLbl::b:p::p, comp userNameTxt::b:p::p}, space s:::p, par b {comp userLbl::b:p::p, comp userTxt::b:p::p}, space s:::p, par b {comp passwordLbl::b:p::p, comp passwordTxt::b:p::p}, space s:::p, par b {comp typeLbl::b:p::p, comp userTypeCB::b:p::p}, space :p:9:p, comp jSeparator2:::p:10:p, space u:::p, par b {comp firstBtn::b::44:x:1, comp lastBtn::b::44:x:1, comp previousBtn::b::43:x:1, comp nextBtn::b::43:x:1}, space u:::p, par b {comp saveBtn::b:::x:1, comp deleteBtn::b:p:41:p:1, comp newBtn::b:::x:1, comp updateBtn::b:::x:1}, space :p:24:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Users"
+			"cursor": new java.awt.Cursor( 0 )
+			"name": "usuarios"
+			"resizable": false
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "nameLbl"
+				"text": "Name: "
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "userLbl"
+				"text": "User:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "passwordLbl"
+				"text": "Password:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "typeLbl"
+				"text": "Type:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "userNameTxt"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "userTxt"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordTxt"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "userTypeCB"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Administrador"
+					addElement( "Administrador" )
+					addElement( "Employee" )
+					addElement( "Dentist" )
+				}
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "saveBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hygienist 1 Blue Check.png" )
+				"text": "Save"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "userIdTxt"
+				"editable": false
+				"minimumSize": new java.awt.Dimension( 0, 0 )
+				"preferredSize": new java.awt.Dimension( 0, 0 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "nextBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Proximo_16x16.png" )
+				"text": "Next"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "previousBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Anterior_16x16.png" )
+				"text": "Previous"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "previousBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "newBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hygienist 1 Blue Add.png" )
+				"text": "New"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "updateBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hygienist 1 Blue Edit 2.png" )
+				"text": "Update"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "deleteBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hygienist 1 Blue Delete.png" )
+				"text": "Delete"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "lastBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Ultimo_16x16.png" )
+				"text": "Last"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "lastBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "firstBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Primeiro_16x16.png" )
+				"text": "First"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "firstBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "searchLbl"
+				"text": "Search :"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "searchTxt"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "searchBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hygienist 1 Blue Search.png" )
+				"text": "Search"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JSeparator" ) {
+				name: "jSeparator1"
+			} )
+			add( new FormComponent( "javax.swing.JSeparator" ) {
+				name: "jSeparator2"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 579, 468 )
+		} )
+	}
+}

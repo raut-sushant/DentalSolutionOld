@@ -1,0 +1,311 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp buttonPanel:::::x, space :::p}, seq l {space :p:13:p, comp doctorDetailsPanel:::::x, space :::p, comp loginPanel:::p::p, space :p:35:p}}}}"
+			"$verticalGroup": "par l {seq {par l {seq {space :::p, comp doctorDetailsPanel:::p::p}, seq l {space :p:37:p, comp loginPanel:::p::p}}, space s:::p, comp buttonPanel:::p::p, space :p:22:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Clinic Details"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp jLabel3::l:::x, seq l {par t:::p {seq l {comp clinicContactLbl:2::p::p, space s:::p, comp clinicContactTxt:::::x}, seq l {par l {par l:t {comp morningTimeLbl:2:l:p::p, comp clinicCityLbl:2:l:p::p}, comp eveningTimeLbl:2:l:p::p}, par l:::p {seq {space :20:20:p, par l:::p {comp cityCB:::p:189:p, seq l {comp morningStartTimeCB:12::p:80:p, space :::x, comp morningEndTimeCB:12::p:80:p}}}, seq {space s:::p, comp eveningStartTimeCB:12::p::p, space :::x, comp eveningEndTimeCB:12::p::p}}}, seq l {par l {comp clinicAddressLbl:2:l:p::p, comp clinicNameLbl:2:l:p:121:p}, space s:::p, par l {comp clinicNameTxt:::::x, comp clinicAddressTxt:::::x}}}, space ::41:x}}}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp jLabel3:1::p::p, space s:::p, par b {comp clinicNameLbl:1:b:p:30:p, comp clinicNameTxt:1:b:p::p}, space s:::p, par b {comp clinicAddressLbl:1:b:p::p, comp clinicAddressTxt:1:b:p::p}, space s:::p, par l:::p {comp clinicContactLbl:1::::x, comp clinicContactTxt:1::::x}, space s:::p, par b {comp clinicCityLbl:1:b:p::p, comp cityCB:1:b:p::p}, space s:::p, par l {seq {par b {comp morningTimeLbl:1:b:p::p, comp morningStartTimeCB:1:b:p::p}, space s:::p, par l {comp eveningTimeLbl:1::p::p, comp eveningStartTimeCB:1::p::p}}, seq l {comp morningEndTimeCB:1::p::p, space s:::p, comp eveningEndTimeCB:1::p::p}}, space ::52:x}}"
+			} ) {
+				name: "doctorDetailsPanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clinicNameLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Clinic Name:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "clinicNameTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clinicAddressLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Clinic Address:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "clinicAddressTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clinicContactLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Contact:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "clinicContactTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clinicCityLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "City:"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "cityCB"
+					"model": new javax.swing.DefaultComboBoxModel
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabel3"
+					"font": new java.awt.Font( "Verdana", 1, 14 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"horizontalAlignment": 0
+					"text": "Add Clinic Details"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "morningTimeLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Morning Time"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "eveningTimeLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Evening Time"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "morningStartTimeCB"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "06:00:00"
+						addElement( "06:00:00" )
+						addElement( "06:30:00" )
+						addElement( "07:00:00" )
+						addElement( "07:30:00" )
+						addElement( "08:00:00" )
+						addElement( "08:30:00" )
+						addElement( "09:00:00" )
+						addElement( "09:30:00" )
+						addElement( "10:00:00" )
+						addElement( "10:30:00" )
+						addElement( "11:00:00" )
+						addElement( "11:30:00" )
+						addElement( "12:00:00" )
+						addElement( "12:30:00" )
+						addElement( "13:00:00" )
+						addElement( "13:30:00" )
+						addElement( "14:00:00" )
+						addElement( "14:30:00" )
+						addElement( "15:00:00" )
+						addElement( "15:30:00" )
+						addElement( "16:00:00" )
+						addElement( "16:30:00" )
+						addElement( "17:00:00" )
+						addElement( "17:30:00" )
+						addElement( "18:00:00" )
+						addElement( "18:30:00" )
+						addElement( "19:00:00" )
+						addElement( "19:30:00" )
+						addElement( "20:00:00" )
+						addElement( "20:30:00" )
+						addElement( "21:00:00" )
+						addElement( "21:30:00" )
+						addElement( "22:00:00" )
+						addElement( "22:30:00" )
+						addElement( "23:00:00" )
+						addElement( "23:30:00" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "morningEndTimeCB"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "06:00:00"
+						addElement( "06:00:00" )
+						addElement( "06:30:00" )
+						addElement( "07:00:00" )
+						addElement( "07:30:00" )
+						addElement( "08:00:00" )
+						addElement( "08:30:00" )
+						addElement( "09:00:00" )
+						addElement( "09:30:00" )
+						addElement( "10:00:00" )
+						addElement( "10:30:00" )
+						addElement( "11:00:00" )
+						addElement( "11:30:00" )
+						addElement( "12:00:00" )
+						addElement( "12:30:00" )
+						addElement( "13:00:00" )
+						addElement( "13:30:00" )
+						addElement( "14:00:00" )
+						addElement( "14:30:00" )
+						addElement( "15:00:00" )
+						addElement( "15:30:00" )
+						addElement( "16:00:00" )
+						addElement( "16:30:00" )
+						addElement( "17:00:00" )
+						addElement( "17:30:00" )
+						addElement( "18:00:00" )
+						addElement( "18:30:00" )
+						addElement( "19:00:00" )
+						addElement( "19:30:00" )
+						addElement( "20:00:00" )
+						addElement( "20:30:00" )
+						addElement( "21:00:00" )
+						addElement( "21:30:00" )
+						addElement( "22:00:00" )
+						addElement( "22:30:00" )
+						addElement( "23:00:00" )
+						addElement( "23:30:00" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "eveningStartTimeCB"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "06:00:00"
+						addElement( "06:00:00" )
+						addElement( "06:30:00" )
+						addElement( "07:00:00" )
+						addElement( "07:30:00" )
+						addElement( "08:00:00" )
+						addElement( "08:30:00" )
+						addElement( "09:00:00" )
+						addElement( "09:30:00" )
+						addElement( "10:00:00" )
+						addElement( "10:30:00" )
+						addElement( "11:00:00" )
+						addElement( "11:30:00" )
+						addElement( "12:00:00" )
+						addElement( "12:30:00" )
+						addElement( "13:00:00" )
+						addElement( "13:30:00" )
+						addElement( "14:00:00" )
+						addElement( "14:30:00" )
+						addElement( "15:00:00" )
+						addElement( "15:30:00" )
+						addElement( "16:00:00" )
+						addElement( "16:30:00" )
+						addElement( "17:00:00" )
+						addElement( "17:30:00" )
+						addElement( "18:00:00" )
+						addElement( "18:30:00" )
+						addElement( "19:00:00" )
+						addElement( "19:30:00" )
+						addElement( "20:00:00" )
+						addElement( "20:30:00" )
+						addElement( "21:00:00" )
+						addElement( "21:30:00" )
+						addElement( "22:00:00" )
+						addElement( "22:30:00" )
+						addElement( "23:00:00" )
+						addElement( "23:30:00" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "eveningEndTimeCB"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "06:00:00"
+						addElement( "06:00:00" )
+						addElement( "06:30:00" )
+						addElement( "07:00:00" )
+						addElement( "07:30:00" )
+						addElement( "08:00:00" )
+						addElement( "08:30:00" )
+						addElement( "09:00:00" )
+						addElement( "09:30:00" )
+						addElement( "10:00:00" )
+						addElement( "10:30:00" )
+						addElement( "11:00:00" )
+						addElement( "11:30:00" )
+						addElement( "12:00:00" )
+						addElement( "12:30:00" )
+						addElement( "13:00:00" )
+						addElement( "13:30:00" )
+						addElement( "14:00:00" )
+						addElement( "14:30:00" )
+						addElement( "15:00:00" )
+						addElement( "15:30:00" )
+						addElement( "16:00:00" )
+						addElement( "16:30:00" )
+						addElement( "17:00:00" )
+						addElement( "17:30:00" )
+						addElement( "18:00:00" )
+						addElement( "18:30:00" )
+						addElement( "19:00:00" )
+						addElement( "19:30:00" )
+						addElement( "20:00:00" )
+						addElement( "20:30:00" )
+						addElement( "21:00:00" )
+						addElement( "21:30:00" )
+						addElement( "22:00:00" )
+						addElement( "22:30:00" )
+						addElement( "23:00:00" )
+						addElement( "23:30:00" )
+					}
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp loginIdLbl:6::p::p, space u:::p, comp loginIdTxt:9::p:150:p}, seq l {comp passwordLbl:6::p::p, space u:::p, comp passwordPwd:9::p::p}, seq l {comp rePasswordLbl:6::p::p, space u:::p, comp rePasswordPwd:9::p::p}, seq l {comp staffNameLbl:6::p::p, space u:::p, comp staffNameTxt:::p:150:p}}, space ::74:x}}"
+				"$verticalGroup": "par l {seq {space :::p, par b {comp staffNameLbl:8:b:p::p, comp staffNameTxt::b::30:x}, space s:::p, par l:::p {comp loginIdLbl:8::::x, comp loginIdTxt:8:::30:x}, space s:::p, par b {comp passwordLbl:8:b:p:30:p, comp passwordPwd:8:b:p::p}, space s:::p, par b {comp rePasswordLbl:8:b:p::p, comp rePasswordPwd:8:b:p::p}, space ::45:x}}"
+			} ) {
+				name: "loginPanel"
+				"border": new javax.swing.border.TitledBorder( null, "Staff Login Details", 4, 0, new java.awt.Font( "Verdana", 1, 12 ), new java.awt.Color( 51, 51, 255, 255 ) )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "loginIdTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "loginIdLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Staff Login Id:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "passwordLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Staff Password:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "rePasswordLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Re-Enter Staff Password:"
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordPwd"
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "rePasswordPwd"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "staffNameLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Staff Name:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "staffNameTxt"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:47:p, comp saveBtn:10::p:121:p, space s:::p, comp cancelBtn:10::p::p, space s:::p, comp msgLbl:::p:293:p, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :p:37:p, par b {comp saveBtn:11:b:p::p, comp cancelBtn:11:b:p::p, comp msgLbl:11:b:p::p}, space ::40:x}}"
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "saveBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Chief of Staff 2b Add.png" )
+					"text": "Save"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Chief of Staff 2b Stop.png" )
+					"text": "Cancel"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "msgLbl"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

@@ -50,7 +50,7 @@ public class MedicineType extends javax.swing.JDialog {
     
     private void saveMedicineType() throws HeadlessException {
         String newMedicineType = searchTxt.getText();
-        if(newMedicineType!=null && newMedicineType.length()>0){
+        if(newMedicineType.isEmpty() && newMedicineType.length()>0){
             if(medicineDao.medicineTypeNotPresent(newMedicineType)) {
                 if (medicineDao.insertMedicineType(newMedicineType)) {
                     messageLbl.setForeground(Color.blue);

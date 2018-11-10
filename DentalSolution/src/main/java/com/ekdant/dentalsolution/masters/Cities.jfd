@@ -1,0 +1,74 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp cityPanel:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp cityPanel:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Cities"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l:::p {seq l {comp searchTxt:::p:195:p, space :p:72:p, comp addBtn:1::p:90:p}, comp jScrollPane1::l:::x, seq l {comp updateCityBtn:1::p::p, space s:::p, comp deleteCityBtn:1::p::p}, comp messagePanel::l:::x}, space ::139:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, par b {comp searchTxt::b:p:31:p, comp addBtn:2:b:p:31:p}, space :p:10:p, comp messagePanel:::p::p, space u:::p, comp jScrollPane1:::p:338:p, space s:::p, par b {comp updateCityBtn:2:b:p::p, comp deleteCityBtn:2:b:p::p}, space :::x}}"
+			} ) {
+				name: "cityPanel"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "searchTxt"
+					"nextFocusableComponent": new FormReference( "addBtn" )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "searchTxtKeyPressed", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "searchTxtKeyReleased", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Cities.jpg" )
+					"text": "Add"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBtnActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "addBtnKeyPressed", true ) )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jScrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "cityTbl"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "City Id" )
+							add( "City Name" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( true )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "updateCityBtn"
+					"text": "Update"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateCityBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteCityBtn"
+					"text": "Delete"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteCityBtnActionPerformed", true ) )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp messageLbl:::p:233:p, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :0:0:p, comp messageLbl::::31:x}}"
+				} ) {
+					name: "messagePanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "messageLbl"
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

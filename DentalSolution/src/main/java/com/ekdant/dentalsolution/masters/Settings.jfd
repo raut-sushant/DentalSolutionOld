@@ -1,0 +1,55 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp cityPanel:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp cityPanel:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Settings"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp jScrollPane1:::p:452:p, seq {comp updateButton:1::p:115:p, space s:::p, comp cancelBtn:1::p:112:p}}, space ::139:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp jScrollPane1:::p:300:p, space s:::p, par b {comp updateButton:2:b:p::p, comp cancelBtn:2:b:p::p}, space ::47:x}}"
+			} ) {
+				name: "cityPanel"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jScrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "settingsTbl"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "KeyName" )
+							add( "Value" )
+						}, new java.util.Vector {
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( true )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "updateButton"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/settingAdd.png" )
+					"text": "Update"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateButtonActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "updateButtonKeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/settingCancel.jpg" )
+					"text": "Cancel"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

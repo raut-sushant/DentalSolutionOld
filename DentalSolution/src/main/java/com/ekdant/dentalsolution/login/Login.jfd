@@ -1,0 +1,78 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :::p, comp jPanelBackground:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq t {space :::p, comp jPanelBackground:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "Login"
+			"name": "frameLogin"
+			"resizable": false
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "${field}.setIconImage(icon.getImage());"
+			}
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :p:39:p, par l:::p {comp lblPassword::::90:x, comp lblUserId:::::x, comp btnEnter:::::x}, space s:::p, par l {comp txtUserId:3::p:212:p, comp txtPassword:3::p:212:p, seq l {comp btnReset:::p:86:p, space s:::p, comp forgotPasswordBtn:::p:137:p}}, space ::112:x}}"
+				"$verticalGroup": "par l {seq t {space :p:36:p, par b {comp lblUserId:1:b:p::p, comp txtUserId:1:b:p:31:p}, space s:::p, par b {comp lblPassword:1:b:p::p, comp txtPassword:1:b:p::p}, space s:::p, par b {comp btnEnter:5:b:p:40:p, comp btnReset:5:b:p::p, comp forgotPasswordBtn:5:b:p::p}, space :::x}}"
+			} ) {
+				name: "jPanelBackground"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblUserId"
+					"font": new java.awt.Font( "Verdana", 1, 14 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "User:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblPassword"
+					"font": new java.awt.Font( "Verdana", 1, 14 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Password:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtUserId"
+					"font": new java.awt.Font( "Segoe UI", 0, 12 )
+					"nextFocusableComponent": new FormReference( "txtPassword" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "txtUserIdActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "txtPassword"
+					"font": new java.awt.Font( "Segoe UI", 0, 12 )
+					"nextFocusableComponent": new FormReference( "btnEnter" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "txtPasswordActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnEnter"
+					"font": new java.awt.Font( "Segoe UI", 0, 12 )
+					"mnemonic": 69
+					"text": "Login"
+					"nextFocusableComponent": new FormReference( "btnReset" )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEnterActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "btnEnterKeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnReset"
+					"font": new java.awt.Font( "Segoe UI", 0, 12 )
+					"mnemonic": 67
+					"text": "Cancel"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnResetActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "forgotPasswordBtn"
+					"text": "Forgot Password"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "forgotPasswordBtnActionPerformed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 536, 247 )
+		} )
+	}
+}

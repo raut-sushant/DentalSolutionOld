@@ -1,0 +1,44 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp jScrollPane2:::p:300:p, space s:::p, comp buttonPanel:::::x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l {comp jScrollPane2::::395:x, seq {comp buttonPanel:::p::p, space :::x}}}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Documents"
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "${field}.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,Toolkit.getDefaultToolkit().getScreenSize().height-Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()).bottom));"
+			}
+			addEvent( new FormEvent( "java.awt.event.WindowFocusListener", "windowGainedFocus", "formWindowGainedFocus", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp uploadBtn:::p:135:p, space ::186:x}}"
+				"$verticalGroup": "par l {seq l {space :p:30:p, comp uploadBtn:::p:40:p, space ::30:x}}"
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "uploadBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/newDocument.png" )
+					"text": "Upload"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "uploadBtnActionPerformed", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane2"
+				"border": new javax.swing.border.TitledBorder( "Documents" )
+				add( new FormComponent( "javax.swing.JTree" ) {
+					name: "jTree1"
+					"model": new javax.swing.tree.DefaultTreeModel( new javax.swing.tree.DefaultMutableTreeNode {
+						userObject: "root"
+					} )
+					"opaque": false
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

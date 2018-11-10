@@ -1,0 +1,155 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp buttonPanel:::::x, space :::p}, seq l {space :p:13:p, comp doctorDetailsPanel:::::x, space :::p, comp loginPanel:::p::p, space :p:35:p}}}}"
+			"$verticalGroup": "par l {seq {par l {seq {space :::p, comp doctorDetailsPanel:::p::p}, seq l {space :p:37:p, comp loginPanel:::p::p}}, space s:::p, comp buttonPanel:::p::p, space :p:22:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "Doctor Details"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp jLabel3::l:::x, seq l {par t:::p {seq l {comp doctorNameLbl:2::p:121:p, space s:::p, comp abbrCom:::p::p, space :::p, comp jLabel1:::p::p, space u:::p, comp doctorNameTxt:::::x}, seq l {comp doctorEmailLbl:2::p::p, space s:::p, comp doctorEmailTxt:::::x}, seq l {comp doctorMobileLbl:2::p::p, space s:::p, comp doctorMobileTxt:::::x}, seq l {par l {par l:t {comp profDegreeLbl:2:l:p::p, comp practiceLbl:2:l:p::p}, comp medRegNoLbl:2:l:p::p}, space :20:20:p, par t:::p {comp medRegNoTxt:::::x, comp practiceCB::l::189:x, comp profDegreeTxt::l:::x}}}, space ::18:x}}}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp jLabel3:1::p::p, space s:::p, par b {comp doctorNameLbl:1:b:p:30:p, comp doctorNameTxt:1:b:p::p, comp jLabel1:1:b:p::p, comp abbrCom:1:b:p::p}, space s:::p, par b {comp doctorMobileLbl:1:b:p::p, comp doctorMobileTxt:1:b:p::p}, space s:::p, par l:::p {comp doctorEmailLbl:1::::x, comp doctorEmailTxt:1::::x}, space s:::p, par b {comp practiceLbl:1:b:p::p, comp practiceCB:1:b:p::p}, space s:::p, par b {comp profDegreeLbl:1:b:p::p, comp profDegreeTxt:1:b:p::p}, space s:::p, par b {comp medRegNoLbl:1:b:p::p, comp medRegNoTxt:1:b:p::p}, space ::51:x}}"
+			} ) {
+				name: "doctorDetailsPanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "doctorNameLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Doctor Name:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "doctorNameTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "doctorMobileLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Doctor Mobile:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "doctorMobileTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "doctorEmailLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Doctor Email:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "doctorEmailTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabel1"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Dr."
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "practiceLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Practice:"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "practiceCB"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "Dentist"
+						addElement( "Dentist" )
+						addElement( "General Practitioner" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "jLabel3"
+					"font": new java.awt.Font( "Verdana", 1, 14 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"horizontalAlignment": 0
+					"text": "Add Doctors Details"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "profDegreeLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Professional Degree(s):"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "profDegreeTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "medRegNoLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Medical Registration No:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "medRegNoTxt"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "abbrCom"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "Mr"
+						addElement( "Mr" )
+						addElement( "Ms" )
+					}
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp loginIdLbl:6::p:122:p, space u:::p, comp loginIdTxt:9::p:150:p}, seq l {comp passwordLbl:6::p::p, space u:::p, comp passwordPwd:9::p::p}, seq l {comp rePasswordLbl:6::p::p, space u:::p, comp rePasswordPwd:9::p::p}}, space ::74:x}}"
+				"$verticalGroup": "par l {seq {space :::p, par l:::p {comp loginIdLbl:8::::x, comp loginIdTxt:8:::30:x}, space s:::p, par b {comp passwordLbl:8:b:p:30:p, comp passwordPwd:8:b:p::p}, space s:::p, par b {comp rePasswordLbl:8:b:p::p, comp rePasswordPwd:8:b:p::p}, space ::45:x}}"
+			} ) {
+				name: "loginPanel"
+				"border": new javax.swing.border.TitledBorder( null, "Login Details", 4, 0, new java.awt.Font( "Verdana", 1, 12 ), new java.awt.Color( 51, 51, 255, 255 ) )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "loginIdTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "loginIdLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Login Id:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "passwordLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Password:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "rePasswordLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Re-Enter Password:"
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordPwd"
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "rePasswordPwd"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:47:p, comp saveBtn:10::p:121:p, space s:::p, comp cancelBtn:10::p::p, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :p:37:p, par b {comp saveBtn:11:b:p::p, comp cancelBtn:11:b:p::p}, space ::40:x}}"
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "saveBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Chief of Staff 2b Add.png" )
+					"text": "Save"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Chief of Staff 2b Stop.png" )
+					"text": "Cancel"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

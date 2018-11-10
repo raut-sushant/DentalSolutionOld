@@ -1,0 +1,230 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {comp editBtn:::p:125:p, space s:::p, comp saveBtn:::p:127:p, space s:::p, comp cancelBtn:::p:129:p, space :::x}, comp jTabbedPane:::::x:2}"
+			"$verticalGroup": "par l {seq l {comp jTabbedPane:::p:559:p, space ::38:x, par b {comp cancelBtn::b:p::p, comp saveBtn::b:p::p, comp editBtn::b:p::p}, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "View Patients"
+			"name": "Patients"
+			"resizable": false
+			addEvent( new FormEvent( "java.awt.event.WindowFocusListener", "windowGainedFocus", "formWindowGainedFocus", true ) )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "jTabbedPane"
+				"font": new java.awt.Font( "Segoe UI", 0, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l:::p {comp nameLbl:2:l:::x, comp addressLbl::l:::x, comp cityLbl::l:::x, comp mobileLbl::l:::x, comp emailLbl::l:::x}, par l {seq {space :5:5:p, comp doctorIdTxt:::p::p:1}, seq l {space s:::p, par l {comp nameTxt:3::p:200:p:1, comp addressTxt:3:l:p:200:p:1, seq l {comp cityCB:::p:160:p, space u:::p, comp addCityBtn:::p:30:p}, comp mobileTxt:3:l:p:200:p, comp emailTxt:3:l:p:200:p:1}}}}, seq l {comp ageLbl:2::::x, space :p:18:p, comp ageTxt:::p:36:p}, seq l {comp genderLbl:2::::x, space s:::p, comp genderCB:::p:75:p:1}, seq {comp birthDayLbl:::p:118:p, space s:::p, comp birthdayDC:::p::p}}, space :p:50:p, par l {seq l {comp regNoLbl:2::p:118:p, space s:::p, comp regNoTxt:3::p:200:p:1}, seq l {comp degreelbl:2::p:118:p, space s:::p, comp degreeTxt:3::p:200:p:1}, seq l {comp specializationLbl:2::p:118:p, space s:::p, comp specializationTxt:3::p:200:p:1}, seq {comp casePaperLbl:2:::118:x, space s:::p, comp typeCB:::p:155:p}}, space :::p}}"
+					"$verticalGroup": "par l {seq t {space :::p, comp doctorIdTxt:::p::p, space s:::p, par l {seq {par b {comp nameLbl:1:b:p::p, comp nameTxt:1:b:p::p}, space s:::p, par b {comp ageLbl:1:b:p::p, comp ageTxt:1:b:p::p}, space s:::p, par b {comp genderLbl:1:b:p::p, comp genderCB:1:b:p::p}}, seq {par b {comp regNoLbl:1:b:p::p, comp regNoTxt:1:b:p::p}, space s:::p, par b {comp degreelbl:1:b:p::p, comp degreeTxt:1:b:p::p}, space s:::p, par b {comp specializationLbl:1:b:p::p, comp specializationTxt:1:b:p::p}}}, space s:::p, par l {seq {par l {par b {comp typeCB:1:b:p::p, comp casePaperLbl:1:b:p::p}, comp birthDayLbl:1:l:p::p}, space s:::p, par b {comp addressLbl:1:b:p::p, comp addressTxt:1:b:p::p}, space s:::p, par l {comp addCityBtn:1:t:p::p, par b {comp cityLbl:1:b:p::p, comp cityCB:1:b:p::p}}, space s:::p, par b {comp mobileLbl:1:b:p::p, comp mobileTxt:1:b:p::p}, space s:::p, par b {comp emailLbl:1:b:p::p, comp emailTxt:1:b:p::p}}, comp birthdayDC:::p::p}, space :::p}}"
+				} ) {
+					name: "doctorDetailsPanel"
+					"font": new java.awt.Font( "Segoe UI", 0, 12 )
+					"preferredSize": new java.awt.Dimension( 806, 550 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "nameLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "* Name:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "addressTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "cityCB" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addressTxtActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "casePaperLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Type"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "birthDayLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Date of birth:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "genderLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": " Gender:"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "genderCB"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Male"
+							addElement( "Male" )
+							addElement( "Female" )
+						}
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "addressTxt" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "addressLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Address:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "nameTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "ageTxt" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "cityLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "City:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "mobileLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Mobile:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "emailLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Email:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "emailTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "saveBtn" )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "mobileTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "emailTxt" )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "doctorIdTxt"
+						"editable": false
+						"minimumSize": new java.awt.Dimension( 0, 0 )
+						"preferredSize": new java.awt.Dimension( 0, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "cityCB"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "select"
+							addElement( "select" )
+						}
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "mobileTxt" )
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "cityCBItemStateChanged", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "ageLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "* Age:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "ageTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "regNoTxt" )
+						addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "ageTxtFocusLost", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ageTxtActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "typeCB"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Main"
+							addElement( "Main" )
+							addElement( "Consulting" )
+						}
+						"enabled": false
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "addCityBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/plus-icon.png" )
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addCityBtnActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "regNoLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "* Reg No:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "regNoTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "degreeTxt" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "degreelbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": " Degree:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "degreeTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "specializationTxt" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "specializationLbl"
+						"background": new java.awt.Color( 51, 51, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 0, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": " Specialization:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "specializationTxt"
+						"enabled": false
+						"nextFocusableComponent": new FormReference( "genderCB" )
+					} )
+					add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+						name: "birthdayDC"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Doctor Details"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Patient Boy 1.png" )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "saveBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Patient Boy 1 Check.png" )
+				"mnemonic": 85
+				"text": "Update"
+				"enabled": false
+				"nextFocusableComponent": new FormReference( "cancelBtn" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "cancelBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Patient Boy 1 Stop.png" )
+				"mnemonic": 67
+				"text": "Cancel"
+				"toolTipText": ""
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "editBtn"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Patient Boy 1 Edit 1.png" )
+				"mnemonic": 69
+				"text": "Edit"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "editBtnActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

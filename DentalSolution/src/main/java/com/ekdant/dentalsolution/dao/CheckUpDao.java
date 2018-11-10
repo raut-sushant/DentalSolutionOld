@@ -41,9 +41,9 @@ public class CheckUpDao {
                 checkup.setPriscription(rs.getString("priscription"));
                 checkup.setFees(rs.getFloat("fees"));
                 checkup.setConsultantingDoctorFee(rs.getFloat("consultantingDoctorFee"));
-                if(rs.getString("nextVisitDate")!=null)
+                if(rs.getString("nextVisitDate").isEmpty())
                     checkup.setNextVisitDate(databaseDateFormat.parse(rs.getString("nextVisitDate")));
-                if(rs.getString("date")!=null)
+                if(rs.getString("date").isEmpty())
                     checkup.setDate(databaseDateFormat.parse(rs.getString("date")));
                 checkup.setDentistName(rs.getString("dentistName"));
                 checkup.setRefferedBy(rs.getString("refferedBy"));
@@ -71,9 +71,9 @@ public class CheckUpDao {
                 checkup.setPriscription(rs.getString("priscription"));
                 checkup.setFees(rs.getFloat("fees"));
                 checkup.setConsultantingDoctorFee(rs.getFloat("consultantingDoctorFee"));
-                if(rs.getString("nextVisitDate")!=null)
+                if(rs.getString("nextVisitDate").isEmpty())
                     checkup.setNextVisitDate(databaseDateFormat.parse(rs.getString("nextVisitDate")));
-                if(rs.getString("date")!=null)
+                if(rs.getString("date").isEmpty())
                     checkup.setDate(databaseDateFormat.parse(rs.getString("date")));
                 checkup.setDentistName(rs.getString("dentistName"));
                 checkup.setRefferedBy(rs.getString("refferedBy"));
@@ -104,9 +104,9 @@ public class CheckUpDao {
                 checkup.setPriscription(rs.getString("priscription"));
                 checkup.setFees(rs.getFloat("fees"));
                 checkup.setConsultantingDoctorFee(rs.getFloat("consultantingDoctorFee"));
-                if(rs.getString("nextVisitDate")!=null)
+                if(rs.getString("nextVisitDate").isEmpty())
                     checkup.setNextVisitDate(databaseDateFormat.parse(rs.getString("nextVisitDate")));
-                if(rs.getString("date")!=null)
+                if(rs.getString("date").isEmpty())
                     checkup.setDate(databaseDateFormat.parse(rs.getString("date")));
                 checkup.setDentistName(rs.getString("dentistName"));
                 checkup.setRefferedBy(rs.getString("refferedBy"));

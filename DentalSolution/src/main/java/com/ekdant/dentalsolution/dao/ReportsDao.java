@@ -66,7 +66,7 @@ public class ReportsDao {
                 MonthlyReportBean monthlyReport = new MonthlyReportBean();
                 monthlyReport.setOpd(rs.getInt("OPD"));
                 monthlyReport.setFees(rs.getFloat("FEES"));
-                if(rs.getString("DATE")!=null)
+                if(rs.getString("DATE").isEmpty())
                     monthlyReport.setDate(databaseDateFormat.parse(rs.getString("DATE")));
                 monthlyReport.setConsultingFees(rs.getFloat("CONSULTATIONDOCTORFEES"));
                 monthlyReports.add(monthlyReport);

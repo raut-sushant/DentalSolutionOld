@@ -1,0 +1,594 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {comp mainButtonPanel:::p::p, space s:::p, par l {seq t {space :0:102:x, comp licenseUpdateMessageLbl:::p:1034:p}, seq {par t {comp clinicDetailsPanel::t:::x, seq t {comp todayInfoPanel:::p::p, space s:::p, comp yesterdayInfoPanel:::p::p}}, space s:::p, par l {comp doctorDetailsPanel:::::x, seq {comp customInfoPanel:::p::p, space :0:0:x}}}}}, comp footerPanel::l:::x:1}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l {seq l {par l:::p {comp doctorDetailsPanel:::::x, comp clinicDetailsPanel:::::x}, space :p:81:p, par l:::p {comp todayInfoPanel:::::x, comp yesterdayInfoPanel::l:::x, comp customInfoPanel::l:::x}, space :::x, comp licenseUpdateMessageLbl:::p:57:p}, comp mainButtonPanel::l:p::p}, space :::p, comp footerPanel:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 0
+			"title": "Shree Ram Dental"
+			"background": new java.awt.Color( 226, 225, 225, 255 )
+			"cursor": new java.awt.Cursor( 0 )
+			"name": "framePrincipal"
+			"resizable": false
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "${field}.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,Toolkit.getDefaultToolkit().getScreenSize().height-Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()).bottom));"
+			}
+			addEvent( new FormEvent( "java.awt.event.FocusListener", "focusGained", "formFocusGained", true ) )
+			addEvent( new FormEvent( "java.awt.event.WindowFocusListener", "windowGainedFocus", "formWindowGainedFocus", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp userLbl:::p:176:p, space :::x, comp dateLbl:::p:143:p, space :p:39:p}}"
+				"$verticalGroup": "par l {par b:l {comp userLbl::b:p::p, comp dateLbl::b:p:19:p}}"
+			} ) {
+				name: "footerPanel"
+				"background": new com.jformdesigner.model.SwingColor( "ComboBox.disabledForeground" )
+				"border": new javax.swing.border.EtchedBorder( 1, null, null )
+				"foreground": new java.awt.Color( 38, 126, 226, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "userLbl"
+					"text": "Welcome, "
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "dateLbl"
+					"text": "Date: "
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {seq t {par l:::p {comp patientVisitTodayLbl:8:l::247:x, comp scheduledAppointmentsLbl:8:l::247:x, comp newPatientTodayLbl::l:::x}, space :p:18:p}, seq l {par l {comp labWorkReceivedLbl:8:l:p::p, par t:l::p {comp labWorkPendingLbl:8::::x, comp labWorkSubmittedLbl:8::::x}}, space s:::p}}, par l {par l:t {comp newPatientsTodayTxt:9:l:p:41:p, comp patientsVisitTodayTxt:9:l:p:41:p, comp scheduledAppointmentsTxt:9:l:p:41:p}, comp labWorkReceivedTxt:9:l:p::p, par l:l {comp labWorkSubmittedTxt:9:l:p::p, comp labWorkPendingTxt:9:t:p::p}}, space ::34:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, par b {comp newPatientTodayLbl:1:b:p:25:p, comp newPatientsTodayTxt:1:b:p:25:p}, space u:::p, par l {comp patientVisitTodayLbl:1::p:25:p, comp patientsVisitTodayTxt:1::p:25:p}, space u:::p, par l {comp scheduledAppointmentsLbl:1:l:p:25:p, comp scheduledAppointmentsTxt:1:l:p:25:p}, space u:::p, par b {comp labWorkPendingLbl:1:b:p::p, comp labWorkPendingTxt:1:b:p::p}, space u:::p, par b {comp labWorkSubmittedLbl:1:b:p::p, comp labWorkSubmittedTxt:1:b:p::p}, space u:::p, par l {comp labWorkReceivedLbl:1::p::p, comp labWorkReceivedTxt:1::p::p}}}"
+			} ) {
+				name: "todayInfoPanel"
+				"border": new javax.swing.border.TitledBorder( "" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "newPatientTodayLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "New Patients Registered Today"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "newPatientsTodayTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientVisitTodayLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Patients Visits Today"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientsVisitTodayTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "scheduledAppointmentsLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Scheduled Appointments"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "scheduledAppointmentsTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labWorkPendingLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Lab Work Pending"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labWorkPendingTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"opaque": true
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labWorkSubmittedLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Lab Work Submitted"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labWorkSubmittedTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"opaque": true
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labWorkReceivedLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Lab Work Received"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labWorkReceivedTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"opaque": true
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp patientsBtn:2:l:p:140:p, comp appointmentBtn:2:l:p:170:p, comp expenseBtn:2:l:p:158:p, comp labBtn:2:l:p:158:p, comp reportsBtn:2:l:p:140:p, comp backupBtn:2:l:p:140:p, comp exitBtn:2:l:p:140:p}, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp patientsBtn:3::p::p, space s:::p, comp appointmentBtn:3::p::p, space s:::p, comp expenseBtn:3::p::p, space s:::p, comp labBtn:3::p::p, space s:::p, comp reportsBtn:3::p:61:p, space s:::p, comp backupBtn:3::p:61:p, space s:::p, comp exitBtn:3::p::p, space :::x}}"
+			} ) {
+				name: "mainButtonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "exitBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Gnome-Application-Exit-48.png" )
+					"mnemonic": 120
+					"text": "Exit"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exitBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "backupBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/backup.png" )
+					"mnemonic": 66
+					"text": "Backup"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backupBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "reportsBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Report 48.png" )
+					"mnemonic": 82
+					"text": "Reports"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "reportsBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "appointmentBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Appointment.jpg" )
+					"mnemonic": 65
+					"text": "Appointment"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "appointmentBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "patientsBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Patient Boy 1-48.png" )
+					"mnemonic": 80
+					"text": "Patients"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "patientsBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "labBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/lab.jpg" )
+					"mnemonic": 76
+					"text": "Lab Work"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "labBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "expenseBtn"
+					"background": new java.awt.Color( 152, 172, 181, 255 )
+					"font": new java.awt.Font( "Tahoma", 1, 12 )
+					"foreground": new java.awt.Color( 9, 68, 158, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/expense1.jpg" )
+					"mnemonic": 69
+					"text": "Expenses"
+					"horizontalAlignment": 10
+					"margin": new java.awt.Insets( 2, 2, 2, 2 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "expenseBtnActionPerformed", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l:::p {comp patientsVisitYesterdayLbl:::::x, comp newPatientsYesterdayLbl::::248:x}, space u:::p, par l {comp newPatientsYesterdayTxt:::p:41:p, comp patientsVisitYesterdayTxt:::p:41:p}, space :0:41:x}}"
+				"$verticalGroup": "par l {seq t {space :::p, par b {comp newPatientsYesterdayLbl::b:p:25:p, comp newPatientsYesterdayTxt::b:p:25:p}, space u:::p, par b {comp patientsVisitYesterdayLbl::b:p:25:p, comp patientsVisitYesterdayTxt::b:p:25:p}, space ::154:x}}"
+			} ) {
+				name: "yesterdayInfoPanel"
+				"border": new javax.swing.border.TitledBorder( "" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "newPatientsYesterdayLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "New Patients Registered Yesterday"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "newPatientsYesterdayTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientsVisitYesterdayLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Patients Visits Yesterday"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientsVisitYesterdayTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, par t:::p {seq l {par t:::p {comp patientsVisitPeriodLbl:::::x, comp newPatientsPeriodLbl::::211:x}, space :::x, comp patientsVisitPeriodTxt:::p:41:p}, seq l {space ::80:x, par t {comp newPatientsPeriodTxt:::p:41:p, seq {par t {seq {comp startDateLbl:::p::p, space :p:41:p}, seq t {comp startDateDC:::p::p, space s:::p}}, par l {comp endDateLbl:::p::p, comp endDateDC:::p:75:p}, space :p:26:p}}}}}}"
+				"$verticalGroup": "par l {seq t {space :::p, par l:::p {comp startDateLbl::::30:x, comp endDateLbl:::::x}, space u:::p, par l {comp startDateDC:::p::p, comp endDateDC:::p::p}, space s:::p, par b {comp newPatientsPeriodLbl::b:p:25:p, comp newPatientsPeriodTxt::b:p:25:p}, space u:::p, par b {comp patientsVisitPeriodLbl::b:p:25:p, comp patientsVisitPeriodTxt::b:p:25:p}, space :p:53:p}}"
+			} ) {
+				name: "customInfoPanel"
+				"border": new javax.swing.border.TitledBorder( "" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "newPatientsPeriodLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "New Patients Registered"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientsVisitPeriodTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "newPatientsPeriodTxt"
+					"background": new java.awt.Color( 0, 51, 255, 255 )
+					"foreground": new java.awt.Color( 255, 255, 153, 255 )
+					"horizontalAlignment": 0
+					"text": "0"
+					"focusable": false
+					"opaque": true
+					"requestFocusEnabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientsVisitPeriodLbl"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Patients Visits"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "startDateLbl"
+					"font": new java.awt.Font( "Verdana", 1, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Start Date"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "endDateLbl"
+					"font": new java.awt.Font( "Verdana", 1, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "End Date"
+				} )
+				add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+					name: "startDateDC"
+				} )
+				add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+					name: "endDateDC"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :p:138:p, par t {seq {space :4:4:p, comp regNoTxt:::::x}, seq {comp docNameTxt::::82:x, space :::p, comp degreeLbl:::p:68:p}}, space :p:98:p}}"
+				"$verticalGroup": "par l {seq l {space :::p, par l {comp docNameTxt:7::p:50:p, comp degreeLbl:7::p::p}, space :::p, comp regNoTxt:::p:25:p, space :::p}}"
+			} ) {
+				name: "doctorDetailsPanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "docNameTxt"
+					"font": new java.awt.Font( "Verdana", 1, 24 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "regNoTxt"
+					"font": new java.awt.Font( "Verdana", 0, 18 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "degreeLbl"
+					"font": new java.awt.Font( "Verdana", 0, 10 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"horizontalAlignment": 2
+					"verticalAlignment": 3
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "licenseUpdateMessageLbl"
+				"font": new java.awt.Font( "Verdana", 1, 14 )
+				"foreground": new java.awt.Color( 255, 51, 51, 255 )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp clinicHeaderLbl:::::x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :p:32:p, comp clinicHeaderLbl:::p:37:p, space :::x}}"
+			} ) {
+				name: "clinicDetailsPanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clinicHeaderLbl"
+					"font": new java.awt.Font( "Verdana", 1, 24 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"horizontalAlignment": 0
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "jMenuBar"
+				"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, true )
+				"alignmentX": 2.5f
+				"alignmentY": 2.0f
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "profileMenu"
+					"text": "    Profile    "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "myProfileItem"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Dentist Blue.png" )
+						"text": "My Profile"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "myProfileItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "myClinicItem"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hospital.png" )
+						"text": "My Clinic"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "myClinicItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "backupDirectoryItem"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Document-icon.png" )
+						"text": "Data Backup Directory"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backupDirectoryItemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "registerMenu"
+					"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+					"text": "     Register     "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "patientsItem"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 80, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Patient Boy 1.png" )
+						"text": "Patients"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "patientsItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "doctorItem"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 68, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Dentist.png" )
+						"text": "Doctors"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "doctorItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "employeeItem"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 69, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Hygienist 2 Green.png" )
+						"text": "Employees"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "employeeItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "appointmentItem"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 65, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Appointment 2.png" )
+						"text": "Appointment"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "appointmentItemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "financialMenu"
+					"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+					"text": "     Financial     "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "expenseTrackingItem"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 88, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/expense.png" )
+						"text": "eXpenses"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "expenseTrackingItemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "reportMenu"
+					"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+					"text": "     Reports     "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "reportItem"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 82, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Calendar.png" )
+						"text": "Reports"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "reportItemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "themeMenu"
+					"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+					"text": "     Theme     "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jItemMetal"
+						"text": "Metal"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jItemMetalActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jItemMotif"
+						"text": "Motif"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jItemMotifActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jItemNimbus"
+						"text": "Nimbus"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jItemNimbusActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jItemLiquid"
+						"text": "Liquid"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jItemLiquidActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jItemGTK"
+						"text": "GTK"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jItemGTKActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "jItemWindows"
+						"text": "Windows"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jItemWindowsActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "settingsMenu"
+					"text": "     Settings     "
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "masterDataSubMenu"
+						"text": "Master Data"
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "treatmentItem"
+							"accelerator": static javax.swing.KeyStroke getKeyStroke( 84, 130, false )
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment.png" )
+							"text": "Treatments"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "treatmentItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+							name: "jSeparator1"
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "preMedicalHistoryItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Planner.png" )
+							"text": "Pre Medical History"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "preMedicalHistoryItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "medicineTypesItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medicine Types 1.jpg" )
+							"text": "Medicine Types"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "medicineTypesItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "medicinesItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medicines.jpg" )
+							"text": "Medicines"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "medicinesItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+							name: "jSeparator"
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "labWorkNameItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/labName.png" )
+							"text": "Lab Work Name"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "labWorkNameItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "labItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Teeth and Gums.png" )
+							"text": "Lab"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "labItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+							name: "jSeparator4"
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "referedByItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Doctor Directory 3.png" )
+							"text": "Refered By"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "referedByItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+							name: "jSeparator2"
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "cityMasterItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/cities.png" )
+							"text": "City"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cityMasterItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPopupMenu$Separator" ) {
+							name: "jSeparator3"
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "expenseCategoryItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/expense.png" )
+							"text": "Expense Category"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "expenseCategoryItemActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "settingsItem"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/setting.png" )
+							"text": "Settings"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "settingsItemActionPerformed", true ) )
+						} )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "helpMenu"
+					"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+					"text": "      Help     "
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "helpItem"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/images/proline-logo_ico.png" )
+						"text": "Help"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "helpItemActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "exitMenu"
+					"border": new javax.swing.border.BevelBorder( 0, null, null, null, null )
+					"text": "     Exit     "
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "exitMenuMouseClicked", true ) )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

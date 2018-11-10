@@ -43,7 +43,7 @@ public class Cities extends javax.swing.JDialog {
     
     private void saveCity() throws HeadlessException {
         String newCityName = searchTxt.getText();
-        if(newCityName!=null && newCityName.length()>0){
+        if(newCityName.isEmpty() && newCityName.length()>0){
             if(cityDao.cityNotPresent(newCityName)){
                 CityBean city = new CityBean();
                 city.setName(newCityName);

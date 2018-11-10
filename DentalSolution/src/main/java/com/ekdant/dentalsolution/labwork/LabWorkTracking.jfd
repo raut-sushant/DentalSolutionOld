@@ -1,0 +1,92 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {comp buttonPanel:::::x, seq {comp mainPanel:::p::p, space :0:10:x}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp mainPanel:::::x, space s:::p, comp buttonPanel:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Lab work Tracking"
+			"name": "Treatment"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:309:p, comp cancelBtn:::p:145:p, space ::211:x}}"
+				"$verticalGroup": "par l {seq t {space :::x, comp cancelBtn:::p::p, space :::p}}"
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Delete.png" )
+					"mnemonic": 67
+					"text": "Cancel"
+					"preferredSize": new java.awt.Dimension( 91, 33 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp expenseHistoryPanel:::p::p, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::x, comp expenseHistoryPanel:::p::p, space :0:0:p}}"
+			} ) {
+				name: "mainPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {comp jScrollPane1::t::635:x, seq {space :::p, comp searchTxt:::p:150:p, space :::x}, comp labWorkTrackingLbl::t:::x}"
+					"$verticalGroup": "par l {seq l {space :::p, comp labWorkTrackingLbl:::p::p, space u:::p, comp searchTxt:::p::p, space u:::p, comp jScrollPane1::::281:x, space :::p}}"
+				} ) {
+					name: "expenseHistoryPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labWorkTrackingLbl"
+						"font": new java.awt.Font( "Verdana", 1, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"horizontalAlignment": 0
+						"text": "Lab Work Tracking"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "searchTxt"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchTxtActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "searchTxtKeyTyped", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane1"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "labWorkTrackingTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "ID" )
+								add( "Date" )
+								add( "Patient" )
+								add( "Lab Work" )
+								add( "Lab" )
+								add( "Status" )
+							}, new java.util.Vector {
+								add( class java.lang.Integer )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( true )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							"rowHeight": 50
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

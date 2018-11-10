@@ -1,0 +1,145 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, par l {comp buttonPanel:::::x, seq {comp mainPanel:::p::p, space :0:0:x}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp mainPanel:::::x, space s:::p, comp buttonPanel:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Expense Tracking"
+			"name": "Treatment"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:247:p, comp saveBtn:::p:145:p, space s:::p, comp cancelBtn:::p:145:p, space :::x}}"
+				"$verticalGroup": "par l {seq t {space :::x, par b {comp saveBtn::b:p::p, comp cancelBtn::b:p::p}, space :::p}}"
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "saveBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Completed.png" )
+					"mnemonic": 83
+					"text": "Save"
+					"nextFocusableComponent": new FormReference( "cancelBtn" )
+					"preferredSize": new java.awt.Dimension( 91, 33 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Delete.png" )
+					"mnemonic": 67
+					"text": "Cancel"
+					"preferredSize": new java.awt.Dimension( 91, 33 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp newExpensePanel:::::x, space s:::p, comp expenseHistoryPanel:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, par t:::p {comp expenseHistoryPanel:::::x, comp newExpensePanel:::::x}, space :0:0:p}}"
+			} ) {
+				name: "mainPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :p:60:p, comp addExpenseLbl:::p:225:p}, seq l {space :::p, par t:::p {comp dateLbl::l:::x, comp notesLbl::l:::x, comp amountLbl::l:::x, comp categoryLbl::l::90:x}, space s:::p, par l:::p {comp notesTxt::l:::x, comp categoryCB::l::130:x, comp amountTxt::l:::x, comp dateDP:::p::p}}}, space ::85:x}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp addExpenseLbl:::p::p, space :p:52:p, par t {seq t {par b {comp categoryLbl:13:b:p::p, comp categoryCB:13:b:p::p}, space s:::p, comp amountLbl:13::p::p}, comp amountTxt:13::p::p}, space s:::p, par b {comp notesLbl:13:b:p::p, comp notesTxt:13:b:p::p}, space s:::p, par t {comp dateLbl:13::p::p, comp dateDP:::p::p}, space ::188:x}}"
+				} ) {
+					name: "newExpensePanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "addExpenseLbl"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"font": new java.awt.Font( "Verdana", 1, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Add your Expense"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "categoryLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Category:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "amountLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Amount"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "notesLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Notes"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "dateLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Date"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "categoryCB"
+						"model": new javax.swing.DefaultComboBoxModel
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "amountTxt"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "notesTxt"
+					} )
+					add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+						name: "dateDP"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :p:109:p, comp expenseHistoryLbl:::p:137:p}, seq l {space :::p, comp jScrollPane1:::p:438:p}, seq l {space :::p, comp searchTxt:::p:150:p}}, space ::24:x}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp expenseHistoryLbl:::p::p, space u:::p, comp searchTxt:::p:30:p, space u:::p, comp jScrollPane1::::313:x, space :::p}}"
+				} ) {
+					name: "expenseHistoryPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "expenseHistoryLbl"
+						"font": new java.awt.Font( "Verdana", 1, 14 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Expense History"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "searchTxt"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchTxtActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "searchTxtKeyTyped", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane1"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "expenseHistoryTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "ID" )
+								add( "Date" )
+								add( "Category" )
+								add( "Notes" )
+								add( "Amount" )
+							}, new java.util.Vector {
+								add( class java.lang.Integer )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

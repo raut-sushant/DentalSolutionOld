@@ -7,10 +7,9 @@ import javax.swing.*;
  */
 public class ConnectionPool {
     final private static String driver = "org.sqlite.JDBC"; // MySQL JDBC driver
-    final private static String mydatabase = "EkDant";
-    final private static String ip = "localhost";
-    final private static String port = "3306";
-    final private static String url = "jdbc:sqlite:D:/Sushant/ConvertedEkdant.sqlite" ;
+    //final private static String driver = "com.mysql.jdbc.Driver"; // MySQL JDBC driver
+    final private static String url = "jdbc:sqlite:D:/Sushant/EkDantNew.sqlite";
+    //final private static String url = "jdbc:mysql://localhost:3306/EkDant" ;
     final private static String username = "root";
     final private static String password = "root";
     private static ConnectionPool connection;

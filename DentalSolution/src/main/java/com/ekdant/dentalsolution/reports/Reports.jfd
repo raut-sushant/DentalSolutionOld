@@ -1,0 +1,529 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp jTabbedPane1::l:::x}"
+			"$verticalGroup": "par l {comp jTabbedPane1::l:::x}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Reports"
+			"extendedState": 2
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "${field}.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,Toolkit.getDefaultToolkit().getScreenSize().height-Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()).bottom));"
+			}
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "jTabbedPane1"
+				"font": new java.awt.Font( "Segoe UI", 0, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :p:25:p, comp dateLbl:::p:108:p, space s:::p, comp dateCB:::p::p, space :p:82:p, comp dailyReportBtn:::p::p}, seq l {space :::p, comp jScrollPane1:::p:675:p}}, space :p:100:p}}"
+					"$verticalGroup": "par l {seq l {space :p:18:p, par l {comp dailyReportBtn:1:l:p:33:p, comp dateLbl:1::p:22:p, comp dateCB::t:p::p}, space s:::p, comp jScrollPane1:::p::p, space ::301:x}}"
+				} ) {
+					name: "dailyReportPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "dateLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Select Date :"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane1"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "dailyReportTable"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Case No" )
+								add( "Name" )
+								add( "Treatment" )
+								add( "Fees" )
+								add( "Consulting Docor Fees" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							auxiliary() {
+								"JavaCodeGenerator.preInitCode": "${field}.setRowSorter(new TableRowSorter(dailyReportTable.getModel()\r\n));"
+							}
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "dailyReportBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Invoice 3D Search.png" )
+						"text": "View Report"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "dailyReportBtnActionPerformed", true ) )
+					} )
+					add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+						name: "dateCB"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Daily Report"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Report24_daily.png" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :p:25:p, comp monthSelectLbl:::p::p, space s:::p, comp month:::p:78:p, space s:::p, comp year:::p::p, space :p:54:p, comp monthlyReportBtn:::p::p}, seq l {space :::p, comp jScrollPane2:::p:570:p}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :p:18:p, par l {comp monthSelectLbl:2::p::p, par b {comp month:2:b:p:33:p, comp year:2:b:p:33:p, comp monthlyReportBtn:2:b:p::p}}, space s:::p, comp jScrollPane2:::p::p, space :p:223:p}}"
+				} ) {
+					name: "monthlyReportPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "monthSelectLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Select Month :"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "month"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Jan"
+							addElement( "Jan" )
+							addElement( "Feb" )
+							addElement( "Mar" )
+							addElement( "Apr" )
+							addElement( "May" )
+							addElement( "Jun" )
+							addElement( "Jul" )
+							addElement( "Aug" )
+							addElement( "Sep" )
+							addElement( "Oct" )
+							addElement( "Nov" )
+							addElement( "Dec" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "year"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "2013"
+							addElement( "2013" )
+							addElement( "2014" )
+							addElement( "2015" )
+							addElement( "2016" )
+							addElement( "2017" )
+							addElement( "2018" )
+							addElement( "2019" )
+							addElement( "2020" )
+						}
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane2"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "monthReportTable"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Date" )
+								add( "New OPD" )
+								add( "OPD" )
+								add( "Fees" )
+								add( "Consulting Docor Fees" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.Integer )
+								add( class java.lang.Integer )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "monthReportTableMouseClicked", true ) )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "monthlyReportBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Invoice 3D Search.png" )
+						"text": "View Report"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "monthlyReportBtnActionPerformed", true ) )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Monthly Report"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Report24_monthly_1.png" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :p:25:p, comp yearSelectLbl:::p:87:p, space s:::p, comp y_year:::p:66:p, space :p:106:p, comp yearlyReportBtn:::p::p}, seq l {space :::p, comp jScrollPane3:::p:570:p, space s:::p, comp chartPanel:::p::p}}, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :p:18:p, par b {comp yearSelectLbl:3:b:p::p, comp yearlyReportBtn:3:b:p:33:p, comp y_year:3:b:p:33:p}, space s:::p, par l:::p {comp chartPanel:::::x, comp jScrollPane3:::::x}, space :::p}}"
+				} ) {
+					name: "yearlyReportPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "yearSelectLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Select Year :"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "y_year"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "2013"
+							addElement( "2013" )
+							addElement( "2014" )
+							addElement( "2015" )
+							addElement( "2016" )
+							addElement( "2017" )
+							addElement( "2018" )
+							addElement( "2019" )
+							addElement( "2020" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "yearlyReportBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Invoice 3D Search.png" )
+						"text": "View Report"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "yearlyReportBtnActionPerformed", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane3"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "yearReportTable"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Month" )
+								add( "New OPD" )
+								add( "OPD" )
+								add( "Fees" )
+								add( "Consulting Docor Fees" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.Integer )
+								add( class java.lang.Integer )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "yearReportTableMouseClicked", true ) )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:615:x}"
+						"$verticalGroup": "par l {space :0:0:x}"
+					} ) {
+						name: "chartPanel"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Yearly Report"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Report24_yearly.png" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp jPanel1:::p::p, space s:::p, comp jPanel3:::p::p, space :0:0:x}, comp jScrollPane4::l::1215:x}, space :::p}}"
+					"$verticalGroup": "par l {seq t {space :p:18:p, par l:::p {comp jPanel1:::::x, comp jPanel3:::p::p}, space s:::p, comp jScrollPane4:::p:500:p, space ::217:x}}"
+				} ) {
+					name: "treatmentReportPanel"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane4"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "treatmentReportTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Treatment" )
+								add( "January" )
+								add( "February" )
+								add( "March" )
+								add( "April" )
+								add( "May" )
+								add( "June" )
+								add( "July " )
+								add( "August" )
+								add( "September" )
+								add( "October" )
+								add( "November" )
+								add( "December" )
+								add( "Total" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :p:26:p, comp treatmentReportByFeesRadioBtn:::p::p, space :p:63:p, comp treatmentReportByOPDRadioBtn:::p::p, space :::x}}"
+						"$verticalGroup": "par l {seq t {space :::x, par b {comp treatmentReportByFeesRadioBtn::b:p::p, comp treatmentReportByOPDRadioBtn::b:p::p}, space :::p}}"
+					} ) {
+						name: "jPanel1"
+						"background": new java.awt.Color( 219, 228, 255, 255 )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "treatmentReportByFeesRadioBtn"
+							"$buttonGroup": new FormReference( "treatmentReportType" )
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+							"selected": true
+							"text": "Fees"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "treatmentReportByFeesRadioBtnActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JRadioButton" ) {
+							name: "treatmentReportByOPDRadioBtn"
+							"$buttonGroup": new FormReference( "treatmentReportType" )
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+							"text": "OPD"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "treatmentReportByOPDRadioBtnActionPerformed", true ) )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, comp yearReportLbl:::p:109:p, space u:::p, comp treatmentReportYearDropDown:::p:69:p, space u:::p, comp treatmentReportBtn:::p::p, space s:::p, comp jButton1:::p:47:p, space :::x}}"
+						"$verticalGroup": "par l {seq t {space :p:11:p, par c {comp yearReportLbl:4:c:p:23:p, comp treatmentReportYearDropDown:4:c:::x, comp treatmentReportBtn:4:c:::x, comp jButton1:4:c:p::p}}}"
+					} ) {
+						name: "jPanel3"
+						"background": new java.awt.Color( 204, 204, 204, 255 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "yearReportLbl"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+							"text": "Report For Year"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "treatmentReportYearDropDown"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "2014"
+								addElement( "2014" )
+								addElement( "2015" )
+								addElement( "2016" )
+								addElement( "2017" )
+								addElement( "2018" )
+								addElement( "2019" )
+								addElement( "2020" )
+							}
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "treatmentReportBtn"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Invoice Flat Search.png" )
+							"text": "View Report"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "treatmentReportBtnActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "jButton1"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Print.png" )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton1ActionPerformed", true ) )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Treatment Report"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Invoice Flat Statis.png" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp jScrollPane5:::::x, space :::p}, comp RefferedByControllPanel:::::x}}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp RefferedByControllPanel:::p::p, space s:::p, comp jScrollPane5:::p:565:p, space ::137:x}}"
+				} ) {
+					name: "refferedByPanel"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, comp jPanel4:::p::p, space s:::p, comp jPanel5:::p::p, space ::592:x}}"
+						"$verticalGroup": "par l {seq {space :::p, par l:::p {comp jPanel4::l:::x, comp jPanel5::l:p::p}, space :::p}}"
+					} ) {
+						name: "RefferedByControllPanel"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :p:26:p, comp refferedByFeesRadio:::p::p, space :p:63:p, comp refferedByOPDRadio:::p::p, space :::x}}"
+							"$verticalGroup": "par l {seq t {space :::x, par b {comp refferedByFeesRadio::b:p::p, comp refferedByOPDRadio::b:p::p}, space :::p}}"
+						} ) {
+							name: "jPanel4"
+							"background": new java.awt.Color( 219, 228, 255, 255 )
+							add( new FormComponent( "javax.swing.JRadioButton" ) {
+								name: "refferedByFeesRadio"
+								"$buttonGroup": new FormReference( "refferedByReportType" )
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"selected": true
+								"text": "Fees"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "refferedByFeesRadioActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JRadioButton" ) {
+								name: "refferedByOPDRadio"
+								"$buttonGroup": new FormReference( "refferedByReportType" )
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"text": "OPD"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "refferedByOPDRadioActionPerformed", true ) )
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, comp refferedByReportYearLbl:::p:109:p, space u:::p, comp refferedByReportYearCB:::p:69:p, space u:::p, comp refferedByViewReportBtn:::p::p, space s:::p, comp printReferedByBtn:::p:47:p, space :::x}}"
+							"$verticalGroup": "par l {seq t {space :p:11:p, par c {comp refferedByReportYearLbl::c:p:23:p, comp refferedByReportYearCB::c:::x, comp refferedByViewReportBtn::c:::x, comp printReferedByBtn::c:p::p}}}"
+						} ) {
+							name: "jPanel5"
+							"background": new java.awt.Color( 204, 204, 204, 255 )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "refferedByReportYearLbl"
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"text": "Report For Year"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "refferedByReportYearCB"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "2014"
+									addElement( "2014" )
+									addElement( "2015" )
+									addElement( "2016" )
+									addElement( "2017" )
+									addElement( "2018" )
+									addElement( "2019" )
+									addElement( "2020" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "refferedByViewReportBtn"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Medical Invoice Flat Search.png" )
+								"text": "View Report"
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "refferedByViewReportBtnActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "printReferedByBtn"
+								"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Print.png" )
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "printReferedByBtnActionPerformed", true ) )
+							} )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane5"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "refferedByTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Reffered By" )
+								add( "January" )
+								add( "February" )
+								add( "March" )
+								add( "April" )
+								add( "May" )
+								add( "June" )
+								add( "July" )
+								add( "August" )
+								add( "September" )
+								add( "October" )
+								add( "November" )
+								add( "December" )
+								add( "Total" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Reffered By Report"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "reportTypeGroup"
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "treatmentReportType"
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "refferedByReportType"
+		} )
+	}
+}

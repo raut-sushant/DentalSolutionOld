@@ -39,7 +39,7 @@ public class LabWorkName extends javax.swing.JDialog {
     
     private void saveLabWorkName() throws HeadlessException {
         String newLabWorkName = searchTxt.getText();
-        if(newLabWorkName!=null && newLabWorkName.length()>0){
+        if(newLabWorkName.isEmpty() && newLabWorkName.length()>0){
             if(labDao.labWorkNameNotPresent(newLabWorkName)){
                 LabWorkNameBean labWorkName = new LabWorkNameBean();
                 labWorkName.setName(newLabWorkName);

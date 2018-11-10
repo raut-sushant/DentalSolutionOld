@@ -1,0 +1,34 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp documentUploaderFC::l:p::p, comp msgLbl:2:l:p:440:p, comp currentPathLbl:2:l:p::p}, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp msgLbl:3::p:35:p, space u:::p, comp currentPathLbl:3::p::p, space :p:25:p, comp documentUploaderFC:::p::p, space :::x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Upload Documents"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "msgLbl"
+				"font": new java.awt.Font( "Verdana", 0, 12 )
+				"foreground": new java.awt.Color( 51, 51, 255, 255 )
+				"text": "Please select directory for database backup"
+			} )
+			add( new FormComponent( "javax.swing.JFileChooser" ) {
+				name: "documentUploaderFC"
+				"fileSelectionMode": 1
+				"opaque": true
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "documentUploaderFCActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "currentPathLbl"
+				"font": new java.awt.Font( "Verdana", 0, 12 )
+				"foreground": new java.awt.Color( 51, 51, 255, 255 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

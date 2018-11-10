@@ -43,7 +43,7 @@ public class DocumentType extends javax.swing.JDialog {
     
     private void saveDocumentType() throws HeadlessException {
         String newDocumentType = searchTxt.getText();
-        if(newDocumentType!=null && newDocumentType.length()>0){
+        if(newDocumentType.isEmpty() && newDocumentType.length()>0){
             if(documentsDao.documentTypeNotPresent(newDocumentType)){
                 DocumentTypeBean documentType = new DocumentTypeBean();
                 documentType.setName(newDocumentType);

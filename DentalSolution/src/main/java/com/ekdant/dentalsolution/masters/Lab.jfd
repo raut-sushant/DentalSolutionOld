@@ -1,0 +1,146 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp referedByPanel:::p::p, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp referedByPanel:::::x, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Lab"
+			"alwaysOnTop": true
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp newLabPanel:::::x, space :::p}, seq {par l:::p {seq {space :p:106:p, comp searchTxt:::p:195:p, space :p:72:p, comp addBtn:::p:90:p}, comp referedByTableScrollPane::::663:x, comp messagePanel::l:::x, comp jPanel1:::::x}, space :0:0:x}}}}"
+				"$verticalGroup": "par l {seq l {space :::p, par b {comp searchTxt::b:p:31:p, comp addBtn::b:p:31:p}, space u:p::p, comp newLabPanel:::p::p, space :::p, comp messagePanel:::p::p, space :::p, comp referedByTableScrollPane:::p:202:p, space :::p, comp jPanel1:::::x}}"
+			} ) {
+				name: "referedByPanel"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "searchTxt"
+					"nextFocusableComponent": new FormReference( "addBtn" )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "searchTxtKeyReleased", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Doctor Directory 3.png" )
+					"text": "Add"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBtnActionPerformed", true ) )
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "addBtnKeyPressed", true ) )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "referedByTableScrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "labTbl"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "Id" )
+							add( "Name" )
+							add( "City" )
+							add( "Contact" )
+							add( "Address" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( true )
+							add( false )
+							add( true )
+							add( true )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "labTblKeyTyped", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {par t:::p {comp jLabel1::::165:x, comp newLabNameTxt::::165:x}, par l {seq {comp citiesCB:4::p:165:p, space :0:0:p, comp newLabContactTxt:5::p:165:p, space :0:0:p, comp newLabAddressTxt:6::p:165:p, space :::p, comp saveNewLab:::p:85:p}, seq {comp jLabel2:4::p:165:p, space :0:0:p, comp jLabel3:5::p:165:p, space :0:0:p, comp jLabel4:6::p:165:p}}, space :0:0:x}}"
+					"$verticalGroup": "par l {seq t {space :0:11:x, par l {par b:l {comp jLabel2:2:b:p::p, comp jLabel3:2:b:p::p, comp jLabel4:2:b:p::p}, comp jLabel1:2::p:25:p}, space :0:0:p, par b {comp newLabNameTxt:1:b:p:31:p, comp newLabContactTxt::b:p:31:p, comp newLabAddressTxt::b:p:31:p, comp citiesCB:1:b:p::p, comp saveNewLab::b:p:31:p}}}"
+				} ) {
+					name: "newLabPanel"
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "newLabNameTxt"
+						"name": ""
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "newLabContactTxt"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newLabContactTxtActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "newLabAddressTxt"
+						"nextFocusableComponent": new FormReference( "saveNewLab" )
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "citiesCB"
+						"model": new javax.swing.DefaultComboBoxModel
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "saveNewLab"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Dentist Check.png" )
+						"text": "Save"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveNewLabActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "saveNewLabKeyPressed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel4"
+						"text": "Adress"
+						"border": new javax.swing.border.LineBorder( new java.awt.Color( 204, 204, 204, 255 ), 1, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel3"
+						"text": "Contact"
+						"border": new javax.swing.border.LineBorder( new java.awt.Color( 204, 204, 204, 255 ), 1, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel2"
+						"text": "City"
+						"border": new javax.swing.border.LineBorder( new java.awt.Color( 204, 204, 204, 255 ), 1, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel1"
+						"text": "Name"
+						"border": new javax.swing.border.LineBorder( new java.awt.Color( 204, 204, 204, 255 ), 1, false )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp messageLbl:::p:322:p, space :::x}}"
+					"$verticalGroup": "par l {comp messageLbl::t::25:x}"
+				} ) {
+					name: "messagePanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "messageLbl"
+						"font": new java.awt.Font( "Tahoma", 1, 14 )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp updateBtn:7::p:98:p, space :p:32:p, comp deleteBtn:7::p::p, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :::p, par l {comp deleteBtn:8::p::p, comp updateBtn:8::p:34:p}, space :::x}}"
+				} ) {
+					name: "jPanel1"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "updateBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Dentist Edit.png" )
+						"text": "Update"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateBtnActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "deleteBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Dentist Delete.png" )
+						"text": "Delete"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteBtnActionPerformed", true ) )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

@@ -162,7 +162,7 @@ public class LabDao {
                 labWork.setStatus(rs.getInt("WORKSTATUS"));
 
                 checkup.setCheckupId(rs.getInt("CHECKUPID"));
-                if(rs.getString("CHECKUPDATE")!=null)
+                if(rs.getString("CHECKUPDATE").isEmpty())
                     checkup.setDate(databaseDateFormat.parse(rs.getString("CHECKUPDATE")));
                 
                 patient.setPatientId(rs.getInt("PATIENTID"));

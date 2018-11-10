@@ -1,0 +1,640 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp buttonPanel:::::x}, comp patientTreatmentPanel::::1327:x, comp patientDetailsPanel::l:::x}"
+			"$verticalGroup": "par l {seq l {comp patientDetailsPanel:::p::p, space :::p, comp patientTreatmentPanel:::p:498:p, space :::p, comp buttonPanel:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Patient Check Up"
+			"name": "Treatment"
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "${field}.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,Toolkit.getDefaultToolkit().getScreenSize().height-Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()).bottom));"
+			}
+			addEvent( new FormEvent( "java.awt.event.WindowFocusListener", "windowGainedFocus", "formWindowGainedFocus", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :p:28:p, par l {seq {par l:::p {comp casePaperLbl:7:l::128:x, comp nameLbl:7:t:::x}, space s:::p, par l:::p {comp casePaperNo::::250:x, comp patientName:::::x}, space s:::p, par l:::p {comp mobileLbl:::::x, comp addressLbl::::57:x}, space :p:9:p, par l:::p {seq l {comp mobileNo:::p:116:p, space s:::p, comp ageGenderLbl:::p:68:p, space s:::p, comp gender:::::x}, comp address::l:p:317:p}, space s:::p, par l:::p {comp cityLbl:::::x, comp birthDayLbl::::89:x}, space s:::p, par l:::p {comp dob::::171:x, comp city:::::x}, space :0:0:x}, seq {comp preMedicalHistoryLbl:::p:128:p, space s:::p, comp medicalHistoryHistPanel:::p:1086:p, space :::p}}}}"
+				"$verticalGroup": "par l {seq l {space :p:15:p, par t {par l {comp casePaperLbl:1:l:p:26:p, comp casePaperNo:1:l:p:22:p, comp mobileLbl:1:l:p:26:p, par b {comp birthDayLbl:1:b:p:27:p, comp ageGenderLbl:1:b:p:23:p}, comp mobileNo:1:l:p:20:p, comp dob:1:l:p:20:p}, comp gender:1::p:23:p}, space u:::p, par l {comp nameLbl:1:l:p:21:p, comp patientName:1:l:p:22:p, par t:l {comp address:1:t:p:22:p, comp addressLbl:1:t:p:30:p, par l:t {comp cityLbl:1:l:p:28:p, comp city:1:l:p:30:p}}}, space ::14:x, par l {comp medicalHistoryHistPanel:::p::p, comp preMedicalHistoryLbl:1::p::p}, space :0:0:p}}"
+			} ) {
+				name: "patientDetailsPanel"
+				"background": new java.awt.Color( 204, 204, 255, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "nameLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "Name: "
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientName"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "casePaperLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "Case Paper :"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "casePaperNo"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "birthDayLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": " Date of birth:"
+					"alignmentY": 0.0f
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "dob"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "addressLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "Adress: "
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "address"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "mobileLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "Mobile: "
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "mobileNo"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "cityLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "City:"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "city"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq t {space :::x, comp pmHistoryLabel1:3::p:210:p, space :p:2:p, comp pmHistoryLabel2:3::p:210:p, space :::p, comp pmHistoryLabel3:3::p:210:p, space :::p, comp pmHistoryLabel4:3::p:210:p, space :::p, comp pmHistoryLabel5:3::p:210:p, space :::p}}"
+					"$verticalGroup": "par l {seq t {par t {comp pmHistoryLabel5:2:l:p:30:p, comp pmHistoryLabel1:2:t:p:30:p, comp pmHistoryLabel2:2:t:p:30:p, comp pmHistoryLabel4:2:t:p:30:p, comp pmHistoryLabel3:2:t:p:30:p}, space :0:0:p}}"
+				} ) {
+					name: "medicalHistoryHistPanel"
+					"background": new java.awt.Color( 204, 204, 255, 255 )
+					"border": new javax.swing.border.EtchedBorder( 1, null, null )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pmHistoryLabel1"
+						"background": new java.awt.Color( 204, 204, 255, 255 )
+						"horizontalAlignment": 2
+						"verticalAlignment": 1
+						"alignmentY": 0.0f
+						"horizontalTextPosition": 10
+						"verticalTextPosition": 1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pmHistoryLabel4"
+						"background": new java.awt.Color( 204, 204, 255, 255 )
+						"horizontalAlignment": 2
+						"verticalAlignment": 1
+						"alignmentY": 0.0f
+						"horizontalTextPosition": 10
+						"verticalTextPosition": 1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pmHistoryLabel2"
+						"background": new java.awt.Color( 204, 204, 255, 255 )
+						"horizontalAlignment": 2
+						"verticalAlignment": 1
+						"alignmentY": 0.0f
+						"horizontalTextPosition": 10
+						"verticalTextPosition": 1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pmHistoryLabel3"
+						"background": new java.awt.Color( 204, 204, 255, 255 )
+						"horizontalAlignment": 2
+						"verticalAlignment": 1
+						"alignmentY": 0.0f
+						"horizontalTextPosition": 10
+						"verticalTextPosition": 1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pmHistoryLabel5"
+						"background": new java.awt.Color( 204, 204, 255, 255 )
+						"horizontalAlignment": 2
+						"verticalAlignment": 1
+						"alignmentY": 0.0f
+						"horizontalTextPosition": 10
+						"verticalTextPosition": 1
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "preMedicalHistoryLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "Pre Medical History:"
+					"toolTipText": ""
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "ageGenderLbl"
+					"font": new java.awt.Font( "Tahoma", 1, 11 )
+					"text": "Age/Sex: "
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "gender"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "patientTreatmentPanel"
+				"font": new java.awt.Font( "Segoe UI", 0, 12 )
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "patientTreatmentPanelStateChanged", true ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp dignosisSummaryLbl:12:l::135:x, comp treatmentLbl:12:l:::x, comp doctorLbl:12:l:::x, comp priscriptionLbl:12:l:::x, comp nextVisitDateLbl:12:l:::x}, space s:::p, par l:::p {seq {comp nextVisitDate:::p::p, space :p:138:p, comp feesLbl:12::::x, space s:::p, comp fees:::p:75:p, space :::x, comp consultingDocFeeLbl:::p:160:p, space s:::p, comp consultingDocFeeTxt:::p:74:p}, seq l {comp addPriscriptionTypeCB:::p:113:p, space u:::p, comp addPriscriptionMedicineNameTxt:::p:209:p, space :::p, comp addPriscriptionMedicineStrengthTxt:::p:138:p, space u:::p, comp addPriscriptionMedicineFrequencyCB:::p:102:p, space :::p, comp addPriscriptionMedicineConditionBox:::p::p, space u:::p, comp addPriscriptionMedicineDurationTxt:::p:61:p, space :::p, comp jLabel2:::p:36:p, space :p:53:p, comp addPriscriptionBtn::::57:x}, comp dignosisSummery::l:::x, seq l {par l:::p {comp doctorCB::::286:x, comp treatmentList:::::x}, space :::p, comp newTreatmentBtn:::p:33:p, space :p:47:p, par l:::p {seq {comp weightLabel:::p:90:p, space u:::p, comp weightText:::p:42:p, space :p:50:p, comp bpLabel:::p:62:p, space :::x, comp bpText:::p:41:p}, seq {comp reffByLbl:::p:89:p, space u:::p, comp reffByCB:::p:200:p}}, space :::p, par t {seq t {comp jLabel1:::p:60:p, space s:::p, comp pulseText:::p:48:p}, seq t {comp newReferedByBtn:::p:33:p, space u:::p, comp treatmentDate:::p::p}}}, comp jScrollPane2::l:::x}, space :::p, par l {comp jPanel5::::297:x, comp jScrollPane3:::::x}, space :::p}}"
+					"$verticalGroup": "par l {seq {space :::p, par l {seq l {par l {par b {comp doctorLbl:10:b:p:26:p, comp doctorCB:11:b:p:25:p, comp reffByLbl:10:b:p:23:p, comp reffByCB:11:b:p:25:p}, par l:t {comp treatmentDate:::p::p, comp newReferedByBtn:11::p::p}}, space s:::p, par t {par b {comp treatmentLbl:10:b:p:23:p, comp treatmentList:11:b:p::p}, par b:l {comp weightLabel:10:b:p:23:p, comp weightText:11:b:p::p, comp bpText:11:b:p::p, comp jLabel1:10:b:p::p, comp pulseText:11:b:p::p, comp bpLabel::b:::x}, comp newTreatmentBtn:11:l:p::p}, space s:::p, par b {comp dignosisSummaryLbl:10:b:::x, comp dignosisSummery:11:b:p::p}, space s:::p, par l {comp addPriscriptionBtn:11:l:p::p, comp addPriscriptionMedicineNameTxt:11:t:p::p, par b {comp addPriscriptionTypeCB:11:b:p:23:p, comp priscriptionLbl:10:b:::x, comp addPriscriptionMedicineStrengthTxt:11:b:p::p, comp addPriscriptionMedicineFrequencyCB:11:b:p::p, comp addPriscriptionMedicineConditionBox:11:b:p::p, comp addPriscriptionMedicineDurationTxt:11:b:p::p, comp jLabel2:11:b:p::p}}, comp jScrollPane2:::p:211:p}, seq t {comp jScrollPane3::::0:x, space :::p, comp jPanel5:::p:180:p}}, space s:::p, par t {par l {comp nextVisitDateLbl:10:t:p::p, comp consultingDocFeeTxt:11:l:p:25:p, par b {comp fees:11:b:p:23:p, comp feesLbl:10:b:p::p, comp consultingDocFeeLbl:10:b:p::p}}, comp nextVisitDate:::p::p}, space :::p}}"
+				} ) {
+					name: "newTreatmentPanel"
+					"font": new java.awt.Font( "Segoe UI", 0, 12 )
+					"preferredSize": new java.awt.Dimension( 1274, 420 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "dignosisSummaryLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Dignosis Summery"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "nextVisitDateLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Next Visit Date"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "feesLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Fees"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "fees"
+						"minimumSize": new java.awt.Dimension( 6, 24 )
+						"nextFocusableComponent": new FormReference( "consultingDocFeeTxt" )
+						"preferredSize": new java.awt.Dimension( 6, 24 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "treatmentLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Treatment "
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "treatmentList"
+						"model": new javax.swing.DefaultComboBoxModel
+						"nextFocusableComponent": new FormReference( "dignosisSummery" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "doctorLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Doctor"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "doctorCB"
+						"model": new javax.swing.DefaultComboBoxModel
+						"nextFocusableComponent": new FormReference( "reffByCB" )
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "doctorCBItemStateChanged", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "reffByLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Reffered By"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "reffByCB"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "select"
+							addElement( "select" )
+						}
+						"nextFocusableComponent": new FormReference( "treatmentList" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "consultingDocFeeLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Consulting Doctor Fees"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "consultingDocFeeTxt"
+						"nextFocusableComponent": new FormReference( "saveBtn" )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "dignosisSummery"
+						"nextFocusableComponent": new FormReference( "priscriptionNewTbl" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "priscriptionLbl"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Priscription"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "bpLabel"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "BP S/D:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "bpText"
+						"nextFocusableComponent": new FormReference( "pulseText" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel1"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Pulse:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "pulseText"
+						"nextFocusableComponent": new FormReference( "dignosisSummery" )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "weightLabel"
+						"font": new java.awt.Font( "Verdana", 0, 12 )
+						"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						"text": "Weight"
+						"toolTipText": ""
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "weightText"
+						"nextFocusableComponent": new FormReference( "bpText" )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "newReferedByBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/plus-icon.png" )
+						"focusable": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newReferedByBtnActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "newTreatmentBtn"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/plus-icon.png" )
+						"focusable": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newTreatmentBtnActionPerformed", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane3"
+						"border": new javax.swing.border.TitledBorder( "Documents" )
+						add( new FormComponent( "javax.swing.JTree" ) {
+							name: "jTree1"
+							"model": new javax.swing.tree.DefaultTreeModel( new javax.swing.tree.DefaultMutableTreeNode {
+								userObject: "root"
+							} )
+							"opaque": false
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :p:11:p, par l:::p {comp labLbl:::::x, comp labWorkLbl::::63:x}, space u:::p, par l {comp labWorkCB:22:l:p:154:p, comp jPanel1::t:p:199:p, comp labCB:22::p:155:p}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::p, par b {comp labWorkCB:24:b::30:x, comp labWorkLbl:24:b:p:28:p}, space u:::p, par l {seq {comp labCB:24::p:25:p, space u:::p, comp jPanel1:::p::p}, comp labLbl:24:l:p:26:p}, space :::x}}"
+					} ) {
+						name: "jPanel5"
+						"border": new javax.swing.border.TitledBorder( "Lab Work" )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labWorkLbl"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+							"text": "Lab Work"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "labWorkCB"
+							"model": new javax.swing.DefaultComboBoxModel
+							addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "labWorkCBItemStateChanged", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labLbl"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+							"text": "Lab"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "labCB"
+							"model": new javax.swing.DefaultComboBoxModel
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {par l {seq {comp ulTxt:13::p:99:p, space :0:0:p, comp urTxt:13::::x}, seq {comp llTxt:13::::x, space :0:0:p, comp lrTxt:13::p:86:p}}, space :::x}}"
+							"$verticalGroup": "par l {seq l {par b {comp ulTxt:14:b:p::p, comp urTxt:14:b:p::p}, space :0:0:p, par b {comp llTxt:14:b:p:28:p, comp lrTxt:14:b:p::p}}}"
+						} ) {
+							name: "jPanel1"
+							"background": new java.awt.Color( 102, 102, 102, 255 )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "ulTxt"
+								"horizontalAlignment": 4
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "urTxt"
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "llTxt"
+								"horizontalAlignment": 4
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "lrTxt"
+							} )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane2"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "priscriptionNewTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Type" )
+								add( "Name" )
+								add( "Strength" )
+								add( "Frequency" )
+								add( "Duration" )
+								add( "" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( true )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							"nextFocusableComponent": new FormReference( "fees" )
+							"rowHeight": 25
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "addPriscriptionTypeCB"
+						"model": new javax.swing.DefaultComboBoxModel
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "addPriscriptionMedicineNameTxt"
+						auxiliary() {
+							"JavaCodeGenerator.customCreateCode": "new Java2sAutoTextField(medicines);"
+						}
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "addPriscriptionBtn"
+						"text": "Add"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addPriscriptionBtnActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "addPriscriptionMedicineStrengthTxt"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "addPriscriptionMedicineFrequencyCB"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "0   -   0   -   1"
+							addElement( "0   -   0   -   1" )
+							addElement( "1   -   0   -   0" )
+							addElement( "1   -   0   -   1" )
+							addElement( "1   -   1   -   1" )
+							addElement( "0   -   1   -   0" )
+							addElement( "0   -   1   -   1" )
+							addElement( "1   -   1   -   0" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "addPriscriptionMedicineConditionBox"
+						"text": "BM"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "addPriscriptionMedicineDurationTxt"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addPriscriptionMedicineDurationTxtActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "jLabel2"
+						"text": "Days"
+					} )
+					add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+						name: "nextVisitDate"
+					} )
+					add( new FormComponent( "com.toedter.calendar.JDateChooser" ) {
+						name: "treatmentDate"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Treatment"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Add.png" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp treatmentHistoryScrollPane:::::x, seq l {comp jPanel4:::p::p, space :::x, comp jScrollPane4:::p:690:p, space s:::p, comp jPanel2:::p::p}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {comp treatmentHistoryScrollPane:::p:208:p, space u:::p, par l {par l:::p {comp jScrollPane4::::0:x, comp jPanel2:::::x}, comp jPanel4:::p::p}, space ::169:x}}"
+				} ) {
+					name: "treatmentHistoryPanel"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "treatmentHistoryScrollPane"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "treatmentHistoryTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Date" )
+								add( "Doctor" )
+								add( "Treatment" )
+								add( "Dignosis" )
+								add( "Fees" )
+								add( "Consulting Docor Fees" )
+								add( "checkupId" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.Float )
+								add( class java.lang.Float )
+								add( class java.lang.Integer )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "jScrollPane4"
+						add( new FormComponent( "javax.swing.JTable" ) {
+							name: "priscriptionHistoryTbl"
+							"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+								add( "Type" )
+								add( "Name" )
+								add( "Strength" )
+								add( "Frequency" )
+								add( "Duration" )
+							}, new java.util.Vector {
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+								add( class java.lang.String )
+							}, new java.util.Vector {
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+								add( false )
+							}, new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							"rowHeight": 25
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :p:18:p, par l {comp labWorkStatusHistoryLbl:15::p::p, seq {par l {comp labHistoryLbl:15::p::p, comp labWorkHistoryLbl:15::p:158:p}, space s:::p, comp jPanel3:::p::p}}, space ::30:x}}"
+						"$verticalGroup": "par l {seq {space :::p, par l {seq l {comp labWorkHistoryLbl:16::p:25:p, space u:::p, comp labHistoryLbl:16::p::p}, comp jPanel3::l:p::p}, space s:::p, comp labWorkStatusHistoryLbl:16::p::p, space :::x}}"
+					} ) {
+						name: "jPanel2"
+						"border": new javax.swing.border.TitledBorder( null, "Lab Work", 4, 0, new java.awt.Font( "Verdana", 0, 12 ), new java.awt.Color( 51, 51, 255, 255 ) )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labWorkHistoryLbl"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labHistoryLbl"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {space :0:0:p, par l {comp ulHistoryLbl:17:l:p:68:p, comp llHistoryLbl:17:l:p::p}, space :p:1:p, par l {comp lrHistoryLbl:17::p::p, comp urHistoryLbl:17::p::p}, space :0:0:p}}"
+							"$verticalGroup": "par l {seq l {space :0:0:p, par b {comp ulHistoryLbl:18:b:p:25:p, comp urHistoryLbl:18:b:p::p}, space :p:1:p, par b {comp llHistoryLbl:18:b:p::p, comp lrHistoryLbl:18:b:p::p}, space :0:0:p}}"
+						} ) {
+							name: "jPanel3"
+							"background": new java.awt.Color( 51, 51, 255, 255 )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "ulHistoryLbl"
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"horizontalAlignment": 4
+								"opaque": true
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "urHistoryLbl"
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"opaque": true
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "llHistoryLbl"
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"horizontalAlignment": 4
+								"opaque": true
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "lrHistoryLbl"
+								"font": new java.awt.Font( "Verdana", 0, 12 )
+								"foreground": new java.awt.Color( 51, 51, 255, 255 )
+								"opaque": true
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labWorkStatusHistoryLbl"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {comp pulseHistLabel:4::p:150:p, comp bpHistLabel:4:l:p:150:p, comp weightHistLabel:4:l:p:150:p}, space :::p}}"
+						"$verticalGroup": "par l {seq {space :::p, comp weightHistLabel:5::p:25:p, space s:::p, comp bpHistLabel:5::p:25:p, space s:::p, comp pulseHistLabel:5::p:25:p, space :::p}}"
+					} ) {
+						name: "jPanel4"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "bpHistLabel"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "weightHistLabel"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "pulseHistLabel"
+							"font": new java.awt.Font( "Verdana", 0, 12 )
+							"foreground": new java.awt.Color( 51, 51, 255, 255 )
+							"verticalAlignment": 1
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "History"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Plan.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:161:p, comp saveBtn:::p:145:p, space s:::p, comp deleteBtn:::p:145:p, space s:::p, comp cancelBtn:::p:145:p, space s:::p, comp saveprintBtn:::p::p, space s:::p, comp printBtn:::p::p, space :::x}}"
+				"$verticalGroup": "par l {seq t {space :::x, par b {comp saveBtn::b:p::p, comp cancelBtn:20:b:p::p, comp deleteBtn::b:p::p}, space :::p}, seq l {space :::p, par b {comp saveprintBtn:20:b:p::p, comp printBtn::b:p::p}, space :::x}}"
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "saveBtn"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Completed.png" )
+					"mnemonic": 83
+					"text": "Save"
+					"nextFocusableComponent": new FormReference( "cancelBtn" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Delete.png" )
+					"mnemonic": 67
+					"text": "Cancel"
+					"preferredSize": new java.awt.Dimension( 91, 33 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteBtn"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Treatment Delete.png" )
+					"mnemonic": 68
+					"text": "Delete"
+					"nextFocusableComponent": new FormReference( "cancelBtn" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "saveprintBtn"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Print.png" )
+					"text": "Save and Print Priscription"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveprintBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "printBtn"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Print.png" )
+					"text": "Print Priscription"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "printBtnActionPerformed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

@@ -101,7 +101,7 @@ public class AppointmentsDao {
                PatientBean patient = new PatientBean();    
                appointment.setAppointmentId(rs.getInt("APPOINTMENTID"));
                appointment.setSlotId(rs.getInt("SLOTID"));
-               if(rs.getString("APPOINTMENTDATE")!=null)
+               if(rs.getString("APPOINTMENTDATE").isEmpty())
                     appointment.setAppointmentDate(databaseDateFormat.parse(rs.getString("APPOINTMENTDATE")));
                appointment.setStatus(rs.getInt("APPOINTMENTSTATUS"));
                appointment.setComment(rs.getString("COMMENTS"));

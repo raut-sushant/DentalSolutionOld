@@ -108,7 +108,7 @@ public class EmployeeDao {
                 employee.setCity(rs.getString("CITY"));
                 employee.setTelephone(rs.getString("TELEPHONE"));
                 employee.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     employee.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 employees.add(employee);
             }

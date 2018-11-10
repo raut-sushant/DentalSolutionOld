@@ -54,7 +54,7 @@ public class ExpenseDao {
             while(rs.next()){
                 ExpenseBean expense = new ExpenseBean();
                 expense.setId(rs.getInt("ID"));
-                if(rs.getString("DATE")!=null)
+                if(rs.getString("DATE").isEmpty())
                     expense.setDate(databaseDateFormat.parse(rs.getString("DATE")));
                 expense.setExpenseCategory(rs.getString("EXPENSECATEGORY"));
                 expense.setNotes(rs.getString("NOTES"));

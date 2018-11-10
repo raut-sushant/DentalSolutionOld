@@ -1,0 +1,214 @@
+JFDML JFormDesigner: "6.0.4.1.172" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :0:0:p, par l {comp jPanel1:::::x, comp jPanel2:::::x}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp jPanel1:::p::p, space u:::p, comp jPanel2:::p::p, space :::x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "Appointment"
+			auxiliary() {
+				"JavaCodeGenerator.preInitCode": "${field}.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width,Toolkit.getDefaultToolkit().getScreenSize().height-Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration()).bottom));"
+			}
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {par t:::p {comp notesLbl:4:l:::x, comp treatmentLbl:4:l::75:x, comp doctorLbl::l:::x}, space s:::p, par l:::p {comp treatmentCB:2:::132:x, comp doctorCB:2:::175:x, comp notesTxt:::::x}}, seq l {comp saveBtn:5::p:115:p, space s:::p, comp cancelBtn:5::p:127:p}}, par l {seq {space :p:26:p, comp patientLbl:::p:75:p, space s:::p, comp patientTxt:::p:110:p, space u:::p, comp jButton2:::p:29:p, space s:::p, comp jScrollPane2:::::x}, seq t {space ::159:x, comp appointmentTitleLabel:::p:453:p, space :p:46:p, comp morningRadiobutton:::p::p, space s:::p, comp eveningRadioButton:::p::p, space :p:151:p}}, space :::p}}"
+				"$verticalGroup": "par l {seq t {par l {seq {space :p:17:p, par l {comp jButton2:8:l:p::p, par b {comp doctorLbl::b:p::p, comp doctorCB::b:p::p, comp patientLbl:8:b:p::p, comp patientTxt:8:b:p::p}}, space s:::p, par b {comp treatmentLbl:3:b:p::p, comp treatmentCB::b:p::p}, space s:::p, par b {comp notesLbl:3:b:p::p, comp notesTxt::b:p::p}}, seq {space :::p, comp jScrollPane2:::p:103:p}}, space s:::p, par l {comp appointmentTitleLabel:::::x, seq t {space :0:0:x, par l {par b:t {comp saveBtn:6:b:p::p, comp cancelBtn:6:b:p::p}, par b:t {comp morningRadiobutton::b:p::p, comp eveningRadioButton::b:p::p}}}}, space :::p}}"
+			} ) {
+				name: "jPanel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "patientLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "* Patient:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "patientTxt"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyTyped", "patientTxtKeyTyped", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "doctorLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "* Doctor:"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "doctorCB"
+					"model": new javax.swing.DefaultComboBoxModel
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "doctorCBActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "treatmentLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Treatment:"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "treatmentCB"
+					"model": new javax.swing.DefaultComboBoxModel
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "notesLbl"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Notes:"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "notesTxt"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "appointmentTitleLabel"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jScrollPane2"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "patientsTbl"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "Patinet Id" )
+							add( "Case Paper Number" )
+							add( "Name" )
+							add( "Age/Gender" )
+							add( "City" )
+							add( "Contact" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						"rowHeight": 25
+						auxiliary() {
+							"JavaCodeGenerator.preInitCode": "${field}.setPreferredSize(new Dimension((Toolkit.getDefaultToolkit().getScreenSize().width)/2,100));"
+						}
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "saveBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Calendar Confirmed.png" )
+					"text": "Save"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "saveBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelBtn"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/Calendar Delete.png" )
+					"text": "Cancel"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelBtnActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "morningRadiobutton"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Morning"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "morningRadiobuttonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "eveningRadioButton"
+					"font": new java.awt.Font( "Verdana", 0, 12 )
+					"foreground": new java.awt.Color( 51, 51, 255, 255 )
+					"text": "Evening"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "eveningRadioButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jButton2"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/EkDant/icones/plus-icon.png" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jButton2ActionPerformed", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, comp prevButton:::p::p, space :0:0:p, comp jScrollPane1:::::x, space :0:0:p, comp nextButton:::p::p}}"
+				"$verticalGroup": "par l {seq {space :::p, par l:::p {comp jScrollPane1:::::x, comp nextButton::l:::x, comp prevButton::l:p:484:p}, space :::p}}"
+			} ) {
+				name: "jPanel2"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jScrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "appointmentTbl"
+						"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, false )
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "SlotId" )
+							add( "Time Slot" )
+							add( "Monday" )
+							add( "Tuesday" )
+							add( "Wednesday" )
+							add( "Thursday" )
+							add( "Friday" )
+							add( "Saturday" )
+							add( "Sunday" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+						"cellSelectionEnabled": true
+						"rowHeight": 50
+						"selectionMode": 0
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "nextButton"
+					"text": ">>"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "prevButton"
+					"text": "<< "
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "prevButtonActionPerformed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup2"
+		} )
+	}
+}

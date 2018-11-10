@@ -69,7 +69,7 @@ public class Treatment extends javax.swing.JDialog {
     
     private void persistTreatment() throws HeadlessException {
         String newTreatmentName = newTreatmentNameTxt.getText();
-        if(newTreatmentName!=null && newTreatmentName.length()>0){
+        if(newTreatmentName.isEmpty() && newTreatmentName.length()>0){
             if(treatmentDao.treatmentNotPresent(newTreatmentName)){
                 TreatmentBean treatment = new TreatmentBean();
                 treatment.setTreatmentName(newTreatmentName);
@@ -114,8 +114,8 @@ public class Treatment extends javax.swing.JDialog {
             TreatmentBean treatment = new TreatmentBean();
             treatment.setTreatmentId(Integer.parseInt(treatmentTbl.getValueAt(row, 0).toString()));
             treatment.setTreatmentName(treatmentTbl.getValueAt(row, 1).toString());
-            treatment.setTreatmentDescription(treatmentTbl.getValueAt(row, 2)!=null?treatmentTbl.getValueAt(row, 2).toString():"");
-            treatment.setTreatmentCharges(treatmentTbl.getValueAt(row, 3)!=null?Float.parseFloat(treatmentTbl.getValueAt(row, 3).toString()):0.0f);
+            treatment.setTreatmentDescription(treatmentTbl.getValueAt(row, 2).isEmpty()?treatmentTbl.getValueAt(row, 2).toString():"");
+            treatment.setTreatmentCharges(treatmentTbl.getValueAt(row, 3).isEmpty()?Float.parseFloat(treatmentTbl.getValueAt(row, 3).toString()):0.0f);
             if (!treatmentList.get(row).equals(treatment)) {
                 updateTreatment(treatment);
             }

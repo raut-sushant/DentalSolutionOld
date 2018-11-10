@@ -39,7 +39,7 @@ public class ExpenseCategories extends javax.swing.JDialog {
     
     private void saveExpenseCategory() throws HeadlessException {
         String newExpenseCategory = searchTxt.getText();
-        if(newExpenseCategory!=null && newExpenseCategory.length()>0){
+        if(newExpenseCategory.isEmpty() && newExpenseCategory.length()>0){
             if(expenseDao.expenseCategoryNotPresent(newExpenseCategory)){
                 ExpenseCategoryBean expenseCategory = new ExpenseCategoryBean();
                 expenseCategory.setName(newExpenseCategory);

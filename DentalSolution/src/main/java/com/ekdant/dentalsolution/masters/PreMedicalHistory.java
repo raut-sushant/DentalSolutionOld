@@ -50,7 +50,7 @@ public class PreMedicalHistory extends javax.swing.JDialog {
     
     private void savePreMedicalHistory() throws HeadlessException {
         String newPreMedicalHistory = searchTxt.getText();
-        if(newPreMedicalHistory!=null && newPreMedicalHistory.length()>0){
+        if(newPreMedicalHistory.isEmpty() && newPreMedicalHistory.length()>0){
             PreMedicalHistoryBean preMedicalHistory = new PreMedicalHistoryBean();
             preMedicalHistory.setDiscription(newPreMedicalHistory);
             if(premedicalHistoryDao.preMedicalHistoryNotPresent(preMedicalHistory.getDiscription())){

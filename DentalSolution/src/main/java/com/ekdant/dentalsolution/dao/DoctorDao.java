@@ -43,7 +43,7 @@ public class DoctorDao {
                 doctor.setTelephone(rs.getString("TELEPHONE"));
                 doctor.setMobile(rs.getString("MOBILE"));
                 doctor.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     doctor.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 doctor.setDegree(rs.getString("DEGREE"));
                 doctor.setRegistrationNo(rs.getString("REGISTRATIONNO"));
@@ -74,7 +74,7 @@ public class DoctorDao {
                 doctor.setTelephone(rs.getString("TELEPHONE"));
                 doctor.setMobile(rs.getString("MOBILE"));
                 doctor.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     doctor.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 doctor.setDegree(rs.getString("DEGREE"));
                 doctor.setRegistrationNo(rs.getString("REGISTRATIONNO"));
@@ -102,7 +102,7 @@ public class DoctorDao {
                 doctor.setTelephone(rs.getString("TELEPHONE"));
                 doctor.setMobile(rs.getString("MOBILE"));
                 doctor.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     doctor.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 doctor.setDegree(rs.getString("DEGREE"));
                 doctor.setRegistrationNo(rs.getString("REGISTRATIONNO"));
@@ -130,7 +130,7 @@ public class DoctorDao {
                 doctor.setTelephone(rs.getString("TELEPHONE"));
                 doctor.setMobile(rs.getString("MOBILE"));
                 doctor.setEmail(rs.getString("EMAIL"));
-                if(rs.getString("BIRTHDAY")!=null)
+                if(rs.getString("BIRTHDAY").isEmpty())
                     doctor.setBirthDate(databaseDateFormat.parse(rs.getString("BIRTHDAY")));
                 doctor.setDegree(rs.getString("DEGREE"));
                 doctor.setRegistrationNo(rs.getString("REGISTRATIONNO"));
@@ -166,7 +166,7 @@ public class DoctorDao {
     public int addDoctor(DoctorBean doctor){
         int doctorId = 0;
         
-        String birthDateStr = null;
+        String birthDateStr = "";
         try{
             birthDateStr = "'" + databaseDateFormat.format(doctor.getBirthDate()) + "'";            
         }catch(Exception e){ }        
