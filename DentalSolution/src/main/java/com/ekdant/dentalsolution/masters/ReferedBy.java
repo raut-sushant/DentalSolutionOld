@@ -124,9 +124,9 @@ public class ReferedBy extends javax.swing.JDialog {
             ReferedByBean refredBy = new ReferedByBean();
             refredBy.setId(Integer.parseInt(referedByTbl.getValueAt(row, 0).toString()));
             refredBy.setName(referedByTbl.getValueAt(row, 1).toString());
-            refredBy.setCity(referedByTbl.getValueAt(row, 2).isEmpty()?referedByTbl.getValueAt(row, 2).toString():"");
-            refredBy.setContact(referedByTbl.getValueAt(row, 3).isEmpty()?referedByTbl.getValueAt(row, 3).toString():"");
-            refredBy.setAddress(referedByTbl.getValueAt(row, 4).isEmpty()?referedByTbl.getValueAt(row, 4).toString():"");
+            refredBy.setCity(referedByTbl.getValueAt(row, 2)!=null?referedByTbl.getValueAt(row, 2).toString():"");
+            refredBy.setContact(referedByTbl.getValueAt(row, 3)!=null?referedByTbl.getValueAt(row, 3).toString():"");
+            refredBy.setAddress(referedByTbl.getValueAt(row, 4)!=null?referedByTbl.getValueAt(row, 4).toString():"");
             if (!referedByList.get(row).equals(refredBy)) {
                 updateRefferedBy(refredBy);
             }

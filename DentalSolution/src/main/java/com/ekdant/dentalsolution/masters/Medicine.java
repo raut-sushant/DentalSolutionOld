@@ -100,7 +100,7 @@ public class Medicine extends javax.swing.JDialog {
             medicine.setId(Integer.parseInt(medicineTbl.getValueAt(row, 0).toString()));
             medicine.setType(medicineTbl.getValueAt(row, 1).toString());
             medicine.setName(medicineTbl.getValueAt(row, 2).toString());
-            medicine.setStrength(medicineTbl.getValueAt(row, 3).isEmpty()?medicineTbl.getValueAt(row, 3).toString():"");
+            medicine.setStrength(medicineTbl.getValueAt(row, 3)!=null?medicineTbl.getValueAt(row, 3).toString():"");
             if (!medicineList.get(row).equals(medicine)) {
                 updateMedicine(medicine);
             }
