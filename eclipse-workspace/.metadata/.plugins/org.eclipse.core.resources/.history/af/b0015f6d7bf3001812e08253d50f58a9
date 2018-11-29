@@ -1,0 +1,9 @@
+package com.yash.demorest;
+
+public class AlienRepository {
+
+	public AlienRepository() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

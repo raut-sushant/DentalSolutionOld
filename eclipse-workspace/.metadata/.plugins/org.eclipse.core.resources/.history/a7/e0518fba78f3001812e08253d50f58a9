@@ -1,0 +1,17 @@
+package com.yash.demorest;
+
+import javax.ws.rs.Path;
+
+@Path("alien")
+public class AlienResource {
+
+	public Alien getAlien() {
+		
+		System.out.println("Alien called..");
+		Alien a1 = new Alien();
+		a1.setName("Sushant");
+		a1.setAge(34);
+		
+		return a1;
+	}
+}

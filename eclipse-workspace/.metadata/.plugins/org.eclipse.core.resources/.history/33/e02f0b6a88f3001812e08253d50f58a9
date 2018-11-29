@@ -1,0 +1,34 @@
+package com.yash.demorest;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("aliens")
+public class AlienResource {
+
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public List<Alien> getAlien() {
+		
+		System.out.println("Alien called..");
+		Alien a1 = new Alien();
+		a1.setName("Sushant");
+		a1.setAge(34);
+		
+		Alien a2 = new Alien();
+		a2.setName("Poonam");
+		a2.setAge(33);
+		
+		Alien a3 = new Alien();
+		a3.setName("Parth");
+		a3.setAge(1);
+		
+		List<Alien> aliens = Arrays.asList(a1,a2,a3); 
+		return aliens;
+	}
+}
