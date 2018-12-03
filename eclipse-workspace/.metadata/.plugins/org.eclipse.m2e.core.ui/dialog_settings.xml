@@ -61,12 +61,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.yash.springrest"/>
 			<item value="com.yash.demorest"/>
 		</list>
 		<list key="groupId">
 			<item value="com.yash"/>
 		</list>
 		<list key="artifactId">
+			<item value="springrest"/>
 			<item value="demorest"/>
 		</list>
 		<list key="projectNameTemplate">
