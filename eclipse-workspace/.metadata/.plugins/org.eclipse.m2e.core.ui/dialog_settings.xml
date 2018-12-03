@@ -30,7 +30,7 @@
 		<item value="548" key="height"/>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
-		<item value="All Catalogs" key="catalog"/>
+		<item value="http://repo1.maven.org/maven2/archetype-catalog.xml" key="catalog"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -61,15 +61,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.yash.springrest"/>
-			<item value="com.yash.demorest"/>
 		</list>
 		<list key="groupId">
-			<item value="com.yash"/>
 		</list>
 		<list key="artifactId">
-			<item value="springrest"/>
-			<item value="demorest"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

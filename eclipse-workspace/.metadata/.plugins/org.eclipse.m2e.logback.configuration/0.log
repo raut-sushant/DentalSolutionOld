@@ -5923,3 +5923,17 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact mysql:mysql-c
 2018-11-30 13:44:49,551 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-11-30 13:44:49,551 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Sushant\eclipse-workspace\springrest\src\test\resources
 2018-11-30 13:50:42,583 [Worker-5: Updating indexes] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 1031181 ms
+2018-12-02 08:05:58,987 [Worker-1: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-12-02 08:06:01,478 [Worker-1: Updating indexes] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|https://repo.maven.apache.org/maven2
+2018-12-02 08:06:17,493 [Worker-1: Updating indexes] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|https://repo.maven.apache.org/maven2 in 16016 ms
+2018-12-02 08:06:17,691 [Worker-4: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.yash:demorest:0.0.1-SNAPSHOT @ D:\Sushant\eclipse-workspace\demorest\pom.xml.
+2018-12-02 08:06:25,920 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-02 08:06:25,923 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-12-02 08:06:25,926 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-02 08:06:25,926 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Sushant\eclipse-workspace\demorest\src\test\resources
+2018-12-02 08:06:28,212 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.yash:demorest:0.0.1-SNAPSHOT @ D:\Sushant\eclipse-workspace\demorest\pom.xml.
+2018-12-02 08:06:35,571 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.yash:springrest:0.0.1-SNAPSHOT @ D:\Sushant\eclipse-workspace\springrest\pom.xml.
+2018-12-02 08:06:53,486 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-02 08:06:53,489 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-12-02 08:06:53,491 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-02 08:06:53,491 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Sushant\eclipse-workspace\demorest\src\test\resources
