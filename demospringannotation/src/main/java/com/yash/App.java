@@ -16,5 +16,6 @@ public class App
         Mobile mobile = (Apple)context.getBean("apple");
         mobile.processor();
         mobile.ram();
+        ((Apple) mobile).getMobileProcessor().process();
     }
 }
